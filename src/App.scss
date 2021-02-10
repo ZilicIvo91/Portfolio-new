@@ -1,0 +1,270 @@
+@import "./sass/theme.scss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  
+}
+body{
+  color: $light-mode-text;
+  @include background-light;
+  transition: 1.5s;
+}
+
+body.dark-mode{
+  background-color: $dark-mode-bg;
+  color: $dark-mode-text;
+  @include background-dark;
+  transition: 1.5s;
+
+  .navbar-sideBar{
+    background-color: $dark-mode-navbar-bg;
+    color: $dark-mode-text;
+    h1{
+       &::first-letter{
+           color: $dark-mode-text-border;
+       }
+   }
+   .navbar-links{
+    color: $dark-mode-text;
+      a{
+          color: $dark-mode-text;
+      }
+    }
+    .navbar-social{
+        .icon{
+            color: $dark-mode-text;
+            font-size: 1.4rem;
+        }
+    }
+  
+}
+  .aboutHome-container{
+    border: 4px solid $dark-mode-text-border;
+    background-color: $dark-mode-navbar-bg;
+
+    .aboutHome-img{
+      background-color: $dark-mode-text-border;
+    }
+    .aboutHome-text{
+      h1{
+        color: $dark-mode-text-border;
+      }
+      button{
+        background-color: $dark-mode-text-border;
+
+        a{
+          color: $dark-mode-text-button;
+        }
+      }
+    }
+    
+    .aboutHome-myJourney{
+        .myJourney-icon{
+            color: $dark-mode-text-border;
+        }
+        .myJourney-text{
+            :last-child{
+              color: $dark-mode-text-border;
+            }
+        }
+    }
+    .aboutHome-interest{
+        .interest-icon{   
+          color: $dark-mode-text-border;
+        }
+    }
+  }
+
+  .home-container{
+    .home{
+      border: 6px solid $dark-mode-text-border;
+    }
+  }
+
+  .navbarHome-sideBar{
+    background-color: $dark-mode-navbar-bg;
+
+    h1{
+      &::first-letter{
+        color: $dark-mode-text-border;
+    }
+    }
+    .navbarHome-links{
+      a{
+        color: $dark-mode-text
+      }
+    }
+    .navbarHome-footer{
+      .icon{
+        color: $dark-mode-text;
+      }
+    }
+  }
+  .about-profile{
+      .about-img{
+          background-color: $dark-mode-text-border;
+      }
+      .about-text{
+          h1{
+            color: $dark-mode-text-border;
+            }
+          button{
+            background-color: $dark-mode-text-border;
+          a{  
+            color: $light-mode-text;
+          }
+      }
+    }
+    .about-myJourneys{
+     .about-myJourney{
+          .myJourney-icon{
+              color: $dark-mode-text-border;
+          }
+          .myJourney-text{
+              :last-child{
+                  color: $dark-mode-text-border;
+              }
+          }
+      }
+    }
+      .about-interest{
+          .interest-icon{
+              color: $dark-mode-text-border;
+          }
+      }
+  }
+  .resume-wrapper{
+    @include background-dark;
+
+      .resume-header{
+          .icon-header{
+              color: $dark-mode-text-border;
+          }
+          .icon{
+              color: $dark-mode-text-border;
+          }
+          .date{
+              color: $dark-mode-text-border;
+          }
+      }
+    
+    .skill-list-element-bar{
+      .skill-bar-html{
+        background-color: $dark-mode-text-border;
+      }
+      .skill-bar-css{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-javaScript{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-react{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-git{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-web{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-redux{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-german{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-english{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-communication{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-listening{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-discipline{
+        @extend .skill-bar-html;
+    }
+
+    .skill-bar-compromise{
+         @extend .skill-bar-html;
+    }
+    }
+  }
+
+.contact-container{ 
+        .contact-call{
+            background-color: $dark-mode-navbar-bg;
+            
+            .contact-icon{
+                color: $dark-mode-text-border;
+            }
+        }
+        input[type=submit]{
+            background-color: $dark-mode-text-border;
+            color: $dark-mode-text-button
+        }
+  }
+  .themeChanger{
+    .themeChanger-icon{
+        color: $dark-mode-text-border;
+    }
+}
+.portfolio-contrainer{
+  @include background-dark;
+  color: $dark-mode-text;
+
+  .portfolio-project{
+    background-color: $dark-mode-text-border;
+
+    p{
+      color: $dark-mode-text-button;
+  }
+  }
+}
+.services-container{
+  @include background-dark;
+      .services-box{
+          border: 1px dashed $dark-mode-text-border;
+
+          .services-icon{
+              color: $dark-mode-text-border;
+          }
+      }
+  }
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.App{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  .toggle{
+    position: absolute;
+    right: 5%;
+    top: 1%;
+  }
+}

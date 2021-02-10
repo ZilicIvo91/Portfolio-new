@@ -1,0 +1,59 @@
+@import "../../sass/theme.scss";
+
+.navbar-sideBar{
+    width: 300px;
+    border-right: 4px solid black;
+    height: 100vh;
+    position: fixed;
+    background-color: $light-mode-navbar-bg;
+    h1{
+       width: 100px;
+       margin: 15px 110px;
+
+        &::first-letter{
+            color: $light-mode-text-border;
+        }
+    }
+
+    .navbar-links{
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+        margin: -10px 100px;
+        color: $light-mode-text;
+        
+        a{
+            display: flex;
+            flex-direction: row;
+            color: $light-mode-text;
+            text-decoration: none;
+            line-height: 15px;
+
+        }
+
+        .navbar-link{
+            margin-left: 10px;
+        }
+    }
+
+
+    .navbar-footer{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        
+        .navbar-social{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            
+            .icon{
+                color: black;
+                font-size: 1.4rem;
+            }
+        }
+        .navbar-copy{
+            text-align: center;
+        }
+    }
+}

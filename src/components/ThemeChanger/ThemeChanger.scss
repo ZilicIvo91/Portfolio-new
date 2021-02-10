@@ -1,0 +1,10 @@
+@import '../../sass/theme.scss';
+
+.themeChanger{
+    .themeChanger-icon{
+        width: 30px;
+        color: $light-mode-text;
+        font-size: 1.5rem;
+        border-radius: 50%;
+    }
+}

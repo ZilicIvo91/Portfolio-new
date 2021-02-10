@@ -1,0 +1,55 @@
+@import '../../sass/theme.scss';
+
+.portfolio-contrainer{
+    color: $light-mode-text;
+    width: 100%;
+    @include background-light;
+
+    .header{
+        text-align: center;
+        margin-left: 400px;
+    }
+
+    .portfolio-projects{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 50%;
+        margin-top: 100px;
+        
+        .portfolio-project{
+            width: 400px;
+            height: 450px;
+            border-radius: 10px;
+            margin-bottom: 100px;
+            background-color: $light-mode-text-border;
+            text-align: center;
+
+            p{
+                color: $light-mode-text-button;
+            }
+
+            a {
+                width: 100px;
+                height: 100px;
+                margin: 75px 150px;
+                cursor: pointer;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                
+                &:hover{
+                    opacity: 0.5;
+                }
+        
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+}

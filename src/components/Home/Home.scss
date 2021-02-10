@@ -1,0 +1,57 @@
+@import '../../sass/theme.scss';
+
+.home-container{
+    position: relative;
+    margin: 50px 50px;
+
+    .home{
+        border: 6px solid $light-mode-text-border;
+        display: flex;
+        flex-direction: row;
+        border-radius: 30px;
+        width: 60%;
+        font-size: 0.7rem;
+    
+        .home-navbar{
+           font-size: 0.9 rem;
+        }
+    .home-links{
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+        margin: 5px 100px;
+        line-height: 0.5;
+        
+        .home-link{
+            border: 1px solid black;
+            margin-left: 10px;
+        }
+    }
+    .home-img{
+        width: 60vw;
+        position: relative;
+        background: url('../../images/office.jpg');
+        background-position: center;
+        background-size: cover;
+        opacity: 0.8;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        
+        .home-title{
+            position: absolute;
+            left: 55%;
+            text-align: center;
+            font-size: 1.2rem;
+            color: $light-mode-text;
+        }
+    }
+}
+    .home-about{
+        width: 70%;
+        height: 60%;
+        font-size: 0.7rem;
+        position: absolute;
+        right: 0px;
+        bottom: -100px;
+    }
+}

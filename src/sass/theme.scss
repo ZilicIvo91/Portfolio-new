@@ -1,0 +1,24 @@
+$dark-mode-text: rgba(255, 255, 255, 0.719);
+$dark-mode-bg: rgb(44, 43, 43);
+$dark-mode-navbar-bg:  #2b292e;
+$dark-mode-text-border: #ffb06a;
+$dark-mode-text-button:  rgb(12, 12, 12);
+
+$light-mode-text-button: rgba(255, 255, 255, 0.719);
+$light-mode-text: rgb(12, 12, 12);
+$light-mode-bg: white;
+$light-mode-text-border: #3b7526e8;
+$light-mode-navbar-bg:  #a3a5a6;
+
+@mixin background-dark {
+    background: url('../images/bg-dark.png') center/cover no-repeat;
+}
+ 
+@mixin background-light {
+    background: url('../images/bg-light.jpg') center/cover no-repeat;
+}
+
+
+
+
+
