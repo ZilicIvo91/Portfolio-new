@@ -29,23 +29,32 @@
         .about-text{
             text-align: justify;
             width: 70%;
+            font-size: 0.95rem;
 
             h1{
                 color: $light-mode-text-border;
             }
 
-            button{
+            .about-button{
                 width: 120px;
                 height: 40px;
                 border-radius: 10px;
                 margin-right: 20px;
-                background-color: $light-mode-text-border;
-
+                background-color: $light-mode-text-border;                
                 
                 a{
                     text-decoration: none;
-                    color: $dark-mode-text;
-
+                    color: $dark-mode-text;     
+                }
+            }
+            .about-buttontwo{
+                @extend .about-button;
+                background-color: $light-mode-text-button;
+                color: $light-mode-text-border;     
+                border: 1px solid $light-mode-text-border;
+                a{
+                    text-decoration: none;
+                    color: $light-mode-text-border;     
                 }
             }
         }
@@ -64,10 +73,15 @@
                     margin-top: 5px;
                     margin-left: 90px;
                     color: $light-mode-text-border;
+                    border: 1px dashed $light-mode-text-border;
+                    border-radius: 10px;
+                    padding: 3px;
                 }
                 .myJourney-text{
                     margin-top: 10px;
                     line-height: 10px;
+                    text-align: start;
+                    margin-left: 50px;
                     :last-child{
                         color: $light-mode-text-border;
                     }
@@ -75,10 +89,13 @@
             }
         }   
     }
-
+    .interest-header{
+        margin-right: 30%;
+    }
     .about-interests{
         display: grid;
         grid-template-columns: 150px 150px 150px;
+        margin-top: 10px;
 
         .about-interest{
             display: flex;
@@ -90,7 +107,7 @@
             }
 
             .interest-icon{
-                font-size: 2.5rem;
+                font-size: 3rem;
                 margin-top: 5px;
                 margin-left: 20px;
                 color: $light-mode-text-border;

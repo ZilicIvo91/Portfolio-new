@@ -29,9 +29,11 @@ function About() {
                 <div className="about-text">
                 <h1>Žilić Ivo</h1>
                 <h3>Frontend developer</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <button><a href={CV_Zilic_Ivo} target="_black">Download CV</a></button>
-                <button><Link to={'/contact'}>Hire me</Link></button>
+                <p>I can call myself a Junior Front-End Developer. I have a master's degree in petroleum engineering. After failing to find a job in my profession, I enrolled in the Algebra College program for Frontend developers. I learn quickly, adopt new technologies, and I'm always ready to improve my knowledge.</p>
+                <p>In every team that I was working, I have found a way to contribute and to bring great value into the team and a project.</p>
+                <p>I am highly motivated to take part in the new team, bring value to company and product, and to get more experience and widen my knowledge in programming.</p>
+                <button className="about-button"><a href={CV_Zilic_Ivo} target="_black">Download CV</a></button>
+                <button className="about-buttontwo"><Link to={'/contact'}>Hire me</Link></button>
                 </div>
 
             </div>
@@ -71,7 +73,7 @@ function About() {
                             </div>
                         </div>
                         <div>
-                            <h2>My Interests</h2>
+                            <h2 className="interest-header">My Interests</h2>
                             <div className="about-interests">
                                 <div className="about-interest">
                                     <p><GiMusicalScore className="interest-icon" /></p>

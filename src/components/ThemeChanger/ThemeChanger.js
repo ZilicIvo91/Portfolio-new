@@ -27,10 +27,10 @@ function ThemeChanger() {
 
     return (
         <>
-            <button onClick={() => setThemeChanger(!themeChanger)}>
+            <button onClick={() => setThemeChanger(!themeChanger)} className="themeChanger">
             {themeChanger 
-                ? <div className="themeChanger"><FiSun className="themeChanger-icon" /></div> 
-                : <div className="themeChanger"><BsMoon className="themeChanger-icon" /></div> 
+                ? <div><FiSun className="themeChanger-icon" /></div> 
+                : <div><BsMoon className="themeChanger-icon" /></div> 
             }    
             </button>
         </>

@@ -1,10 +1,13 @@
 @import '../../sass/theme.scss';
 
 .themeChanger{
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: $light-mode-text-border;
     .themeChanger-icon{
-        width: 30px;
+        font-size: 1.2rem;
+        margin-top: 5px;
         color: $light-mode-text;
-        font-size: 1.5rem;
-        border-radius: 50%;
     }
 }

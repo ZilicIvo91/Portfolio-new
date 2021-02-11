@@ -42,17 +42,19 @@ function Contact() {
             <div className="contact-inputs">
                 <h1>Get In Touch</h1>
                 <form>
-                    <div className="contact-name-email">
-                        <input type="text" placeholder="Name" />
-                        <input type="text" placeholder="E-mail" />
+                    <div className="contact-input">
+                        <div className="contact-name-email">
+                            <input type="text" placeholder="Name" />
+                            <input type="text" placeholder="E-mail" />
+                        </div>
+                        <div className="contact-subject">
+                            <input type="text" placeholder="Subject" />
+                        </div>
+                        <div className="contact-area">
+                            <textarea placeholder="Message" />
+                        </div>
+                            <input type="submit" value="Send Message" />
                     </div>
-                    <div className="contact-subject">
-                        <input type="text" placeholder="Subject" />
-                    </div>
-                    <div className="contact-area">
-                        <textarea placeholder="Message" />
-                    </div>
-                        <input type="submit" value="Send Message" />
                 </form>
             </div>
         </div>

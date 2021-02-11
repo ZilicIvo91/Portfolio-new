@@ -22,6 +22,9 @@ body.dark-mode{
   @include background-dark;
   transition: 1.5s;
 
+  .themeChanger{
+    background-color: $dark-mode-navbar-bg;
+}
   .navbar-sideBar{
     background-color: $dark-mode-navbar-bg;
     color: $dark-mode-text;
@@ -55,19 +58,29 @@ body.dark-mode{
       h1{
         color: $dark-mode-text-border;
       }
-      button{
-        background-color: $dark-mode-text-border;
-
+      .aboutHome-button{
+        background-color: $dark-mode-text-border;                
+        
         a{
-          color: $dark-mode-text-button;
+            color: $light-mode-text;
         }
-      }
+    }
+    .aboutHome-buttontwo{
+        @extend .aboutHome-button;
+        background-color: $dark-mode-text-button;
+        color: $dark-mode-text-border;     
+        border: 1px solid $dark-mode-text-border;
+        a{
+            color: $dark-mode-text-border;     
+        }
+    }
     }
     
     .aboutHome-myJourney{
         .myJourney-icon{
             color: $dark-mode-text-border;
-        }
+            border: 1px dashed $dark-mode-text-border;
+          }
         .myJourney-text{
             :last-child{
               color: $dark-mode-text-border;
@@ -114,10 +127,21 @@ body.dark-mode{
           h1{
             color: $dark-mode-text-border;
             }
-          button{
+            .about-button{
             background-color: $dark-mode-text-border;
+
           a{  
-            color: $light-mode-text;
+            color: $dark-mode-text;
+          }
+        }
+        .about-buttontwo{
+          @extend .about-button;
+          background-color: $dark-mode-text-button;
+          color: $dark-mode-text-border;     
+          border: 1px solid $dark-mode-text-border;
+          a{
+              text-decoration: none;
+              color: $dark-mode-text-border;     
           }
       }
     }
@@ -125,6 +149,7 @@ body.dark-mode{
      .about-myJourney{
           .myJourney-icon{
               color: $dark-mode-text-border;
+              border: 1px dashed $dark-mode-text-border;
           }
           .myJourney-text{
               :last-child{
