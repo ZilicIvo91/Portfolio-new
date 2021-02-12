@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.scss';
 import { Links } from '../../helpers/Links';
 
@@ -6,16 +6,23 @@ import { FaFacebook } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiFillGithub } from 'react-icons/ai';
 import { AiOutlineInstagram } from 'react-icons/ai';
+import { FaTimes } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
+
 import { Link } from 'react-router-dom';
 
-function Navbar({ homeChange }) {
-
+function Navbar() {
+    const [clicked, setClicked] = useState(false);
     return (
-            <div className="navbar-sideBar">
+        <>
+        <button className='menu-icon' onClick={() => setClicked(!clicked)}>
+                {clicked ? <FaBars /> : <FaTimes />}
+            </button>
+            <div  className={clicked ? "navbar-sideBar none" : "navbar-sideBar" }>
                 <h1>Žilić</h1>
                 {Links.map((link) => {
                     return(
-                    <div key={link.id} className="navbar-links" onClick={homeChange}>
+                    <div key={link.id} className="navbar-links">
                         <Link to={link.url}>
                             <div className="navbar-link">
                                 <p>{link.icon}</p>
@@ -39,6 +46,7 @@ function Navbar({ homeChange }) {
                     </div>
                 </div>
             </div>
+        </>
     )
 }
 

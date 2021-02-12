@@ -32,3 +32,23 @@
         }
     }
 }
+@media screen and (max-width: 400px){
+    .services-container{
+        width: 100%;
+        margin-left: 0px;
+
+        .services-boxes{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 0px;
+            margin-bottom: 20px;
+
+            .services-box{
+                margin-left: 50px;
+                width: 250px;
+                height: 300px;
+                
+            }
+        }
+    }
+}

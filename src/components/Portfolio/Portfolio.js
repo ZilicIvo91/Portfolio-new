@@ -19,7 +19,7 @@ function Portfolio() {
                         </a>
                         <h5>Description: Car service</h5>
                         <p>Choose a brand, service and if you have the code "Tokić123" you get a 30% discount.</p>          
-                        <p></p>            
+                        <p>App with redux</p>            
                     </div>
 
                     <div className="portfolio-project">
@@ -27,7 +27,7 @@ function Portfolio() {
                             <img src={Poke_Ball} alt="PokeBall"/> 
                         </a>
                         <h5>Description: Pokemon application</h5> 
-                        <p>The application have search box, filter type pokemon and pokemon details.</p>   
+                        <p>The application have search box, filter type pokemon and pokemon details.</p>  
                     </div>
 
                     <div className="portfolio-project">

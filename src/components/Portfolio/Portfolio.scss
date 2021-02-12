@@ -55,5 +55,31 @@
             }
         }
     }
+}
+@media screen and (max-width: 400px){
+    .portfolio-contrainer{
+        width: 100%;
+        .header{
+            margin: 20px 0px 0px;
+        }
+        .portfolio-projects{
+            margin-left: 0px;
+            margin-top: 50px;
 
+            .portfolio-project{
+                width: 300px;
+                margin-left: 50px;
+
+                a{
+                    margin-left: 100px;
+                }
+
+                p{
+                    margin-left: 10px;
+                    color: $light-mode-text-button;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
 }

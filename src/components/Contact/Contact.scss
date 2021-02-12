@@ -3,6 +3,7 @@
 .contact-container{
     width: 80%;
     margin-left: 300px;
+    @include background-light;
     h1{
         text-align: center;
     }
@@ -81,5 +82,34 @@
             color: $light-mode-text-button
         }
     }
+}
+@media screen and (max-width: 400px){
+    .contact-container{
+        width: 100%;
+        margin-left: 0px;
 
+        .contact{
+            display: flex;
+            flex-direction: column;
+            margin: 20px 40px;
+
+            .contact-call{
+                margin-bottom: 40px;
+            } 
+        }
+    }
+    .contact-input{
+        width: 100%;
+        .contact-name-email{
+            input{
+                margin-bottom: 20px;
+            }
+        }
+        .contact-subject input{
+            width: 300px;
+        }
+        .contact-area textarea{
+                width: 300px;
+            }   
+    }
 }

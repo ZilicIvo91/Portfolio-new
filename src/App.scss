@@ -47,6 +47,10 @@ body.dark-mode{
     }
   
 }
+.menu-icon{
+  color: $dark-mode-text-border;
+  background-color: black;
+}
   .aboutHome-container{
     border: 4px solid $dark-mode-text-border;
     background-color: $dark-mode-navbar-bg;
@@ -119,6 +123,9 @@ body.dark-mode{
       }
     }
   }
+  .about-container{
+    @include background-dark;
+  
   .about-profile{
       .about-img{
           background-color: $dark-mode-text-border;
@@ -164,6 +171,7 @@ body.dark-mode{
           }
       }
   }
+}
   .resume-wrapper{
     @include background-dark;
 
@@ -234,6 +242,7 @@ body.dark-mode{
   }
 
 .contact-container{ 
+    @include background-dark;
         .contact-call{
             background-color: $dark-mode-navbar-bg;
             
@@ -286,6 +295,14 @@ code {
   display: flex;
   flex-direction: row;
   position: relative;
+
+  @media screen and (max-width: 400px){
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+
 
   .toggle{
     position: absolute;

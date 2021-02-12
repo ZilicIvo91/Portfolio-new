@@ -116,3 +116,18 @@
         }
     }
 }
+@media screen and (max-width: 400px){
+    .resume-wrapper{
+        width: 100%;
+        margin-left: 0px;
+        .resume-container{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0px;
+        }
+        .skill-el-box{
+            width: 70%;
+            margin-left: 40px;
+        }
+    }
+}
