@@ -6,12 +6,15 @@ import { FaFacebook } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiFillGithub } from 'react-icons/ai';
 import { AiOutlineInstagram } from 'react-icons/ai';
+
 import { Link } from 'react-router-dom';
 
-function Navbar() {
 
+function NavbarHome() {
     return (
+        <>
             <div className="navbarHome-sideBar">
+
                 <h1>Žilić</h1>
                 {Links.map((link) => {
                     return(
@@ -39,7 +42,8 @@ function Navbar() {
                     </div>
                 </div>
             </div>
+        </>
     )
 }
 
-export default Navbar
+export default NavbarHome

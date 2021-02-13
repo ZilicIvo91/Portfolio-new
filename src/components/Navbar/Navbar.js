@@ -18,7 +18,7 @@ function Navbar() {
         <button className='menu-icon' onClick={() => setClicked(!clicked)}>
                 {clicked ? <FaBars /> : <FaTimes />}
             </button>
-            <div  className={clicked ? "navbar-sideBar none" : "navbar-sideBar" }>
+            <div className={clicked ? "navbar-sideBar none" : "navbar-sideBar" }>
                 <h1>Žilić</h1>
                 {Links.map((link) => {
                     return(

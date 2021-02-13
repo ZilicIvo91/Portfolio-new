@@ -1,8 +1,12 @@
 @import '../../sass/theme.scss';
 
+.home-mobile{
+    display: none;
+}
 .home-container{
     position: relative;
     margin: 50px 50px;
+    @include background-light;
 
     .home{
         border: 6px solid $light-mode-text-border;
@@ -12,9 +16,6 @@
         width: 60%;
         font-size: 0.7rem;
     
-        .home-navbar{
-           
-        }
     .home-links{
         width: 100px;
         display: flex;
@@ -43,6 +44,10 @@
             text-align: center;
             font-size: 1.2rem;
             color: $light-mode-text;
+
+            .home-mobile{
+                display: none;
+            }
         }
     }
 }
@@ -56,5 +61,53 @@
     }
 }
 @media screen and (max-width: 400px){
-    
+    .home-about, .home-container{
+        display: none;
+    }
+    .home-mobile{
+        display: block;
+        @include background-light;
+
+        .home-navbar-mobile{
+            width: 80%;
+        }
+        .home-title-mobile{
+            width: 80%;
+            height: 500px;
+            border: 6px solid $light-mode-text-border;
+            margin: 30px 35px;
+            border-radius: 30px;
+            background: url('../../images/office.jpg');
+            background-position: center;
+            background-size: cover;
+            opacity: 0.8;
+            position: relative;
+
+            .home-text-mobile{
+                position: absolute;
+                left: 35%;
+                top: 15%;
+                color: $light-mode-text;
+            }
+            .home-mobile-btn{
+                position: absolute;
+                left: 15%;
+                top: 60%;
+                width: 300px;
+                button{
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 10px;
+                    margin-right: 20px;
+                    background-color: $light-mode-text-border;                
+                    
+                    a{
+                        text-decoration: none;
+                        color: $dark-mode-text;     
+                    }
+                }
+            }
+        }
+
+    }
 }
