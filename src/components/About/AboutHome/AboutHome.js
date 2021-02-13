@@ -18,7 +18,6 @@ import { Link } from 'react-router-dom';
 
 function AboutHome() {
     return (
-        <div>
             <div className="aboutHome-container">
                 <h1>About Me</h1>
                 <div className="aboutHome-profile">
@@ -101,7 +100,6 @@ function AboutHome() {
                             </div>
                     </div>
                 </div>
-        </div>
         </div>
     )
 }

@@ -23,9 +23,7 @@ function Home() {
                                 </div>
                         </div>
                     </div>
-                    <div className="home-about">
                         <AboutHome />
-                    </div>
             </div>
             <div className="home-mobile">  
                         <Navbar />

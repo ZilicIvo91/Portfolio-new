@@ -25,7 +25,8 @@ body.dark-mode{
 
   .themeChanger{
     background-color: $dark-mode-navbar-bg;
-}
+  }
+
   .navbar-sideBar{
     background-color: $dark-mode-navbar-bg;
     color: $dark-mode-text;
@@ -34,24 +35,26 @@ body.dark-mode{
            color: $dark-mode-text-border;
        }
    }
+
    .navbar-links{
     color: $dark-mode-text;
       a{
           color: $dark-mode-text;
       }
     }
-    .navbar-social{
-        .icon{
-            color: $dark-mode-text;
-            font-size: 1.4rem;
-        }
-    }
-  
-}
-.menu-icon{
-  color: $dark-mode-text-border;
-  background-color: black;
-}
+      .navbar-social{
+          .icon{
+              color: $dark-mode-text;
+              font-size: 1.4rem;
+          }
+      }
+  }
+
+  .menu-icon{
+    color: $dark-mode-text-border;
+    background-color: black;
+  }
+
   .aboutHome-container{
     border: 4px solid $dark-mode-text-border;
     background-color: $dark-mode-navbar-bg;
@@ -59,17 +62,18 @@ body.dark-mode{
     .aboutHome-img{
       background-color: $dark-mode-text-border;
     }
-    .aboutHome-text{
-      h1{
-        color: $dark-mode-text-border;
-      }
-      .aboutHome-button{
-        background-color: $dark-mode-text-border;                
-        
-        a{
-            color: $light-mode-text;
+
+      .aboutHome-text{
+        h1{
+          color: $dark-mode-text-border;
         }
-    }
+        .aboutHome-button{
+          background-color: $dark-mode-text-border;                
+        
+          a{
+            color: $light-mode-text;
+          }
+      }
     .aboutHome-buttontwo{
         @extend .aboutHome-button;
         background-color: $dark-mode-text-button;
@@ -78,7 +82,7 @@ body.dark-mode{
         a{
             color: $dark-mode-text-border;     
         }
-    }
+      }
     }
     
     .aboutHome-myJourney{
@@ -126,10 +130,10 @@ body.dark-mode{
   .navbarHome-sideBar{
     background-color: $dark-mode-navbar-bg;
 
-    h1{
-      &::first-letter{
-        color: $dark-mode-text-border;
-    }
+      h1{
+        &::first-letter{
+          color: $dark-mode-text-border;
+      }
     }
     .navbarHome-links{
       a{
@@ -314,14 +318,13 @@ code {
   display: flex;
   flex-direction: row;
   position: relative;
+  height: min-content;
 
   @media screen and (max-width: 400px){
     width: 100%;
     display: flex;
     flex-direction: column;
   }
-
-
 
   .toggle{
     position: absolute;

@@ -2,11 +2,12 @@
 
 .aboutHome-container{
     text-align: center;
-    width: 70%;
-    border: 4px solid $light-mode-text-border;
+    width: 38%;
+    border: 5px solid $light-mode-text-border;
     background-color: $light-mode-navbar-bg;
     margin-left: 60%;
-    margin-top: -28.4%;
+    margin-top: -33.4%;
+    font-size: 0.7rem;
 
     .aboutHome-profile{
         display: grid;
@@ -38,7 +39,7 @@
                 width: 80px;
                 height: 35px;
                 border-radius: 5px;
-                margin-right: 10px;
+                margin: 10px;
                 background-color: $light-mode-text-border;                
                 
                 a{

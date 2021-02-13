@@ -25,16 +25,16 @@ function About() {
                 </div>
 
                 <div className="about-text">
-                <h1>Žilić Ivo</h1>
-                <h3>Frontend developer</h3>
-                <p>I can call myself a Junior Front-End Developer. I have a master's degree in petroleum engineering. After failing to find a job in my profession, I enrolled in the Algebra College program for Frontend developers. I learn quickly, adopt new technologies, and I'm always ready to improve my knowledge.</p>
-                <p>I can call myself a Junior Front-End Developer. I have a master's degree in petroleum engineering. After failing to find a job in my profession, I enrolled in the Algebra College program for Frontend developers. I learn quickly, adopt new technologies, and I'm always ready to improve my knowledge.</p>
-                <p>In every team that I was working, I have found a way to contribute and to bring great value into the team and a project.</p>
-                <p>I am highly motivated to take part in the new team, bring value to company and product, and to get more experience and widen my knowledge in programming.</p>
-                <div className="about-btns">
-                    <button className="about-button"><a href={CV_Zilic_Ivo} target="_black">Download CV</a></button>
-                    <button className="about-buttontwo"><Link to={'/contact'}>Hire me</Link></button>
-                </div>
+                    <h1>Žilić Ivo</h1>
+                    <h3>Frontend developer</h3>
+                    <p>I can call myself a Junior Front-End Developer. I have a master's degree in petroleum engineering. After failing to find a job in my profession, I enrolled in the Algebra College program for Frontend developers. I learn quickly, adopt new technologies, and I'm always ready to improve my knowledge.</p>
+                    <p>In every team that I was working, I have found a way to contribute and to bring great value into the team and a project.</p>
+                    <p>I am highly motivated to take part in the new team, bring value to company and product, and to get more experience and widen my knowledge in programming.</p>
+                    
+                    <div className="about-btns">
+                        <button className="about-button"><a href={CV_Zilic_Ivo} target="_black">Download CV</a></button>
+                        <button className="about-buttontwo"><Link to={'/contact'}>Hire me</Link></button>
+                    </div>
                 </div>
 
             </div>
