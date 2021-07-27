@@ -3,53 +3,34 @@
 .services-container{
     text-align: center;
     width: 100%;
-    margin-left: 300px;
+    margin-bottom: 50px;
     @include background-light;
+
+    h1{
+        margin-left: 175px;
+    }
     
     .services-boxes{
-        display: grid;
-        grid-template-columns: auto auto;
-        width: 50%;
+        width: 100%;
         margin-top: 50px;
         
-        .services-box{
-            width: 300px;
-            height: 300px;
-            border: 1px dashed $light-mode-text-border;
-            padding: 20px;
-            margin-left: 175px;
-            margin-top: 50px;
-    
-            .services-icon{
-                margin-top: 20px;
-                font-size: 3.5rem;
-                color: $light-mode-text-border;
-            }
-
-            h2{
-                font-size: 1.5rem;
-            }
+        .services-row{
+            display: flex;
+            justify-content: center;
         }
+        
     }
 }
 
 @media screen and (max-width: 400px){
     .services-container{
-        width: 100%;
-        margin-left: 0px;
-
-        .services-boxes{
-            display: grid;
-            grid-template-columns: 1fr;
-            margin-top: 0px;
-            margin-bottom: 20px;
-
-            .services-box{
-                margin-left: 50px;
-                width: 250px;
-                height: 300px;
-                
-            }
+        h1{
+            margin: 30px 0;
+        }
+        .services-row{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
         }
     }
 }

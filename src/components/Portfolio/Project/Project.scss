@@ -1,0 +1,53 @@
+@import '../../../sass/theme.scss';
+
+.project{
+    width: 30%;
+    border-radius: 10px;
+    margin: 30px 0;
+    background-color: $light-mode-text-border;
+    text-align: start;
+    border: 1px solid black;
+    
+    .project-img{
+        width: 100%;
+        text-align: center;
+        margin: 20px auto;
+        a {
+            width: 70%;
+            height: 75px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.5rem;
+            
+            &:hover{
+                opacity: 0.4;
+                transition: 1s;
+            }
+    
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+
+    .project-link{
+        text-align: center;
+        a{
+            font-size: 1.3rem;
+            h6{
+                margin: 0;
+            }
+        }
+    }
+    .project-text{
+        text-align: center;
+        width: 80%;
+        margin: 20px 10%;
+    }
+}
+@media screen and (max-width: 400px){
+    .project{
+        width: 100%;
+    }
+}

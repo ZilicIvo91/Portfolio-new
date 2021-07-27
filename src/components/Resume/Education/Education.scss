@@ -1,0 +1,30 @@
+@import '../../../sass/theme.scss';
+
+.education-header{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    line-height: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    
+    .education-icon{
+        margin-left: 50px;
+        margin-top: 25px;
+        color: $light-mode-text-border;
+    }
+    
+    .education-date{
+        color: $light-mode-text-border;
+        font-size: 1.1rem;
+        font-family: italic;
+        line-height: 1px;
+    }
+}
+@media screen and (max-width: 400px){
+    .education-header{
+        width: 70%;
+        margin: 0;
+    }
+
+}

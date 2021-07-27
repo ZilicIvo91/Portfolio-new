@@ -3,16 +3,19 @@
 .about-container{
     text-align: center;
     width: 100%;
+    height: 100vh;
     margin-left: 300px;
     @include background-light;
-
+    
     .about-profile{
         display: grid;
         grid-template-columns: 1fr 1fr;
-
+        margin-top: 25px;
+        
         .about-img{
-            margin-left: 150px;
-            margin-top: 50px;
+            border: 1px solid black;
+            margin-left: 25%;
+            margin-top: 5%;
             width: 220px;
             height: 220px;
             background-color: $light-mode-text-border;
@@ -28,8 +31,8 @@
         
         .about-text{
             text-align: justify;
-            width: 70%;
-            font-size: 0.95rem;
+            width: 80%;
+            font-size: 1.3rem;
 
             h1{
                 color: $light-mode-text-border;
@@ -40,6 +43,7 @@
                 height: 40px;
                 border-radius: 10px;
                 margin-right: 20px;
+                margin-top: 5%;
                 background-color: $light-mode-text-border;                
                 
                 a{
@@ -61,32 +65,8 @@
        
         .about-myJourneys{
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-right: 30px;
-    
-            .about-myJourney{
-                display: grid;
-                grid-template-columns: 100px 150px;
-                
-                .myJourney-icon{
-                    font-size: 2.5rem;
-                    margin-top: 5px;
-                    margin-left: 90px;
-                    color: $light-mode-text-border;
-                    border: 1px dashed $light-mode-text-border;
-                    border-radius: 10px;
-                    padding: 3px;
-                }
-                .myJourney-text{
-                    margin-top: 10px;
-                    line-height: 10px;
-                    text-align: start;
-                    margin-left: 50px;
-                    :last-child{
-                        color: $light-mode-text-border;
-                    }
-                }
-            }
+            grid-template-columns: auto auto;
+            margin-left: 150px;
         }   
     }
     .interest-header{
@@ -94,57 +74,48 @@
     }
     .about-interests{
         display: grid;
-        grid-template-columns: 150px 150px 150px;
-        margin-top: 10px;
-
-        .about-interest{
-            display: flex;
-            flex-direction: row;
-
-            p:last-child{
-                margin-top: 30px;
-                margin-left: 15px;
-            }
-
-            .interest-icon{
-                font-size: 3rem;
-                margin-top: 5px;
-                margin-left: 20px;
-                color: $light-mode-text-border;
-            }
-        }
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 10px 6%;
+        width: 80%;
     }
 }
+
 @media screen and (max-width: 400px){
     .about-container{
         width: 100%;
         margin-top: 10px;
         margin-left: 0px;
-
+        
         .about-profile{
-            width: 70%;
+            width: 100%;
             display: grid;
             grid-template-columns: 1fr;
-
+            
             .about-img{
                 width: 60%;
-               margin-left: 20%;
-               margin-top: 20px;
-            }
-            .about-text{
-                width: 80%;
                 align-items: center;
-                margin-left: 20%;
+                margin-left: 15%;
+            }
 
-                h1,h3,p{
+            .about-text{
+                width: 90%;
+                align-items: center;
+                margin-left: 5%;
+
+                h1{
                     text-align: center;
                 }
+
+                p{
+                    text-align: justify;
+                }
+                
                 .about-btns{
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     margin-left: 20px;
                     button{
-                        font-size: 0.7rem;
+                        font-size: 1rem;
                     }
                 }
             }
@@ -155,18 +126,23 @@
                 .about-myJourneys{
                     display: flex;
                     flex-direction: column;
-                    margin-left: 30px;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                    
                 }
             }
-           h2{
-               margin-left: 30px;
-               width: 100%;
-           }
-            .about-interests{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            .interest-container{
+                width: 90%;
+                margin: 50px;
+
+                .about-interests{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                }
             }
         }
     }

@@ -1,0 +1,22 @@
+@import '../../../sass/theme.scss';
+
+.headerResume-header{
+    width: 400px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    line-height: 25px;
+
+    .headerResume-icon{
+        margin-left: 50px;
+        color: $light-mode-text-border;
+    }
+}
+@media screen and (max-width: 400px){
+    .headerResume-header{
+        width: 100%;
+        border: 1px solid black;
+        .headerResume-icon{
+            margin: 0;
+        }
+    }
+}

@@ -4,83 +4,26 @@
     color: $light-mode-text;
     width: 100%;
     @include background-light;
-
+    margin-left: 300px;
+    
     .header{
         text-align: center;
-        margin-left: 400px;
+        font-size: 1.5rem;
+        margin-top: 30px;
     }
 
     .portfolio-projects{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        margin-left: 50%;
-        margin-top: 100px;
-        
-        .portfolio-project{
-            width: 400px;
-            height: min-content;
-            border-radius: 10px;
-            margin-bottom: 100px;
-            background-color: $light-mode-text-border;
-            text-align: start;
-            h5{
-                margin-left: 20px;
-            }
-            p{
-                margin-left: 20px;
-                color: $light-mode-text-button;
-                margin-bottom: 50px;
-            }
-
-            a {
-                width: 100px;
-                height: 75px;
-                margin: 75px 150px 100px;
-                cursor: pointer;
-                text-decoration: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 1.5rem;
-                
-                &:hover{
-                    opacity: 0.5;
-                }
-        
-                img {
-                    width: 200px;
-                    height: 200px;
-                }
-            }
-        }
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 50px 0px;
     }
 }
 
 @media screen and (max-width: 400px){
     .portfolio-contrainer{
-        width: 100%;
-        .header{
-            margin: 20px 0px 0px;
-        }
-        .portfolio-projects{
-            margin-left: 0px;
-            margin-top: 50px;
-
-            .portfolio-project{
-                width: 300px;
-                margin-left: 50px;
-
-                a{
-                    margin-left: 100px;
-                }
-
-                p{
-                    margin-left: 10px;
-                    color: $light-mode-text-button;
-                    margin-bottom: 50px;
-                }
-            }
-        }
+        margin: 0;
     }
 }

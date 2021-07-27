@@ -1,134 +1,39 @@
 @import '../../sass/theme.scss';
 
 .resume-wrapper{
-    width: 80%;
+    width: 100%;
     margin-left: 300px;
     @include background-light;
     
     h1{
         text-align: center;
+        margin-right: 200px;
     }
-        .resume-container{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin: auto 200px;
-        
-            .resume-header{
-                width: 400px;
-                display: grid;
-                grid-template-columns: 100px 1fr;
-                line-height: 15px;
-
-                .icon-header{
-                    margin-left: 50px;
-                    color: $light-mode-text-border;
-                }
-
-                .icon{
-                    margin-left: 50px;
-                    margin-top: 25px;
-                    color: $light-mode-text-border;
-                }
-
-                .date{
-                    color: $light-mode-text-border;
-                    font-size: 1rem;
-                    font-family: italic;
-                    line-height: 1px;
-                }
-            }
-            .resume-title{
-                width: 500px;
-            }
-
-        .skill-list-element-bar{
-            width: 80%;
-            height: 15px;
-            background-color: white;
-            border: 1px solid black;
-            margin-bottom: 50px;
-
-            .skill-bar-html{
-                width: 90%;
-                height: 15px;
-                background-color: $light-mode-text-border;
-            }
-
-            .skill-bar-css{
-                @extend .skill-bar-html;
-                width: 80%;
-            }
-
-            .skill-bar-javaScript{
-                @extend .skill-bar-html;
-                width: 70%;
-            }
-
-            .skill-bar-react{
-                @extend .skill-bar-html;
-                width: 70%;
-            }
-
-            .skill-bar-git{
-                @extend .skill-bar-html;
-                width: 80%;
-            }
-
-            .skill-bar-web{
-                @extend .skill-bar-html;
-                width: 75%;
-            }
-
-            .skill-bar-redux{
-                @extend .skill-bar-html;
-                width: 80%;
-            }
-
-            .skill-bar-german{
-                @extend .skill-bar-html;
-                width: 90%;
-            }
-
-            .skill-bar-english{
-                @extend .skill-bar-html;
-                width: 70%;
-            }
-
-            .skill-bar-communication{
-                @extend .skill-bar-html;
-                width: 95%;
-            }
-
-            .skill-bar-listening{
-                @extend .skill-bar-html;
-                width: 95%;
-            }
-
-            .skill-bar-discipline{
-                @extend .skill-bar-html;
-                width: 95%;
-            }
-
-            .skill-bar-compromise{
-                 @extend .skill-bar-html;
-                width: 95%;
-            }
-        }
+    .resume-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 50px 300px;
     }
 }
 
 @media screen and (max-width: 400px){
     .resume-wrapper{
-        width: 100%;
-        margin-left: 0px;
+        width: 90%;
+        margin: 0px;
+
+        h1{
+            width: 100%;
+            text-align: center;
+        }
         .resume-container{
+            width: 100%;
             display: grid;
             grid-template-columns: 1fr;
             margin: 0px;
         }
-        .skill-el-box{
-            width: 70%;
-            margin-left: 40px;
+        .resume-title{
+            border: 1px solid red;
+            width: 100%;
         }
     }
 }

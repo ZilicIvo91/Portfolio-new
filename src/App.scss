@@ -8,10 +8,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
-  
 }
 body{
+  max-height: 100vh; 
   color: $light-mode-text;
   @include background-light;
   transition: 1.5s;
@@ -22,11 +21,61 @@ body.dark-mode{
   color: $dark-mode-text;
   @include background-dark;
   transition: 1.5s;
-
+  
   .themeChanger{
     background-color: $dark-mode-navbar-bg;
   }
+  
+  .aboutHome-container{
+    border: 4px solid $dark-mode-text-border;
+    background-color: $dark-mode-navbar-bg;
 
+    .aboutHome-img{
+      background-color: $dark-mode-text-border;
+    }
+
+      .aboutHome-text{
+        h1{
+          color: $dark-mode-text-border;
+        }
+    .aboutHome-buttons{
+      .aboutHome-btnFirst{
+          background-color: $dark-mode-text-border;                 
+          a{
+              color: $light-mode-text;
+          }
+      }
+      .aboutHome-buttontwo{
+          @extend .aboutHome-btnFirst;
+          background-color: $dark-mode-text-button;
+          color: $dark-mode-text-border;     
+          border: 1px solid $dark-mode-text-border;
+          a{
+              color: $dark-mode-text-border;     
+          }
+      }
+  }
+    }
+    .myJourneys{
+      .myJourney-icon{ 
+            color: $dark-mode-text-border;
+            border: 1px dashed $dark-mode-text-border;   
+          }
+          .myJourney-text{
+              :last-child{
+                  color: $dark-mode-text-border;
+              }
+    }
+  }
+    .interest{
+      .interestIcon-icon{
+        color: $dark-mode-text-border;
+      }
+      .interestIcon-title{
+        color: $dark-mode-text;
+      }
+    }
+  }
   .navbar-sideBar{
     background-color: $dark-mode-navbar-bg;
     color: $dark-mode-text;
@@ -55,62 +104,14 @@ body.dark-mode{
     background-color: black;
   }
 
-  .aboutHome-container{
-    border: 4px solid $dark-mode-text-border;
-    background-color: $dark-mode-navbar-bg;
-
-    .aboutHome-img{
-      background-color: $dark-mode-text-border;
-    }
-
-      .aboutHome-text{
-        h1{
-          color: $dark-mode-text-border;
-        }
-        .aboutHome-button{
-          background-color: $dark-mode-text-border;                
-        
-          a{
-            color: $light-mode-text;
-          }
-      }
-    .aboutHome-buttontwo{
-        @extend .aboutHome-button;
-        background-color: $dark-mode-text-button;
-        color: $dark-mode-text-border;     
-        border: 1px solid $dark-mode-text-border;
-        a{
-            color: $dark-mode-text-border;     
-        }
-      }
-    }
-    
-    .aboutHome-myJourney{
-        .myJourney-icon{
-            color: $dark-mode-text-border;
-            border: 1px dashed $dark-mode-text-border;
-          }
-        .myJourney-text{
-            :last-child{
-              color: $dark-mode-text-border;
-            }
-        }
-    }
-    .aboutHome-interest{
-        .interest-icon{   
-          color: $dark-mode-text-border;
-        }
-    }
-  }
-
+  
   .home-container{
     @include background-dark;
     .home{
       border: 6px solid $dark-mode-text-border;
-    }
-
-    
+    } 
   }
+  
   .home-mobile{
     @include background-dark;
     .home-title-mobile{
@@ -123,16 +124,15 @@ body.dark-mode{
           }                
         }
       }
-      
     }
   }
-
+  
   .navbarHome-sideBar{
     background-color: $dark-mode-navbar-bg;
-
-      h1{
-        &::first-letter{
-          color: $dark-mode-text-border;
+    
+    h1{
+      &::first-letter{
+        color: $dark-mode-text-border;
       }
     }
     .navbarHome-links{
@@ -148,14 +148,14 @@ body.dark-mode{
   }
   .about-container{
     @include background-dark;
-  
-  .about-profile{
+    
+    .about-profile{
       .about-img{
-          background-color: $dark-mode-text-border;
+        background-color: $dark-mode-text-border;
       }
       .about-text{
-          h1{
-            color: $dark-mode-text-border;
+        h1{
+          color: $dark-mode-text-border;
             }
             .about-button{
             background-color: $dark-mode-text-border;
@@ -175,108 +175,63 @@ body.dark-mode{
           }
       }
     }
-    .about-myJourneys{
-     .about-myJourney{
-          .myJourney-icon{
-              color: $dark-mode-text-border;
-              border: 1px dashed $dark-mode-text-border;
+    .myJourneys{
+      .myJourney-icon{ 
+            color: $dark-mode-text-border;
+            border: 1px dashed $dark-mode-text-border;   
           }
           .myJourney-text{
               :last-child{
                   color: $dark-mode-text-border;
               }
-          }
+    }
+  }
+
+    .interest{
+      .interestIcon-icon{
+        color: $dark-mode-text-border;
+      }
+      .interestIcon-title{
+        color: $dark-mode-text;
       }
     }
-      .about-interest{
-          .interest-icon{
-              color: $dark-mode-text-border;
-          }
-      }
   }
 }
   .resume-wrapper{
     @include background-dark;
 
-      .resume-header{
-          .icon-header{
-              color: $dark-mode-text-border;
-          }
-          .icon{
-              color: $dark-mode-text-border;
-          }
-          .date{
-              color: $dark-mode-text-border;
-          }
+    .skill-bar{
+      background-color: $dark-mode-text-border;
       }
-    
-    .skill-list-element-bar{
-      .skill-bar-html{
-        background-color: $dark-mode-text-border;
+
+      .education-icon{
+        color: $dark-mode-text-border;
       }
-      .skill-bar-css{
-        @extend .skill-bar-html;
-    }
 
-    .skill-bar-javaScript{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-react{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-git{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-web{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-redux{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-german{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-english{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-communication{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-listening{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-discipline{
-        @extend .skill-bar-html;
-    }
-
-    .skill-bar-compromise{
-         @extend .skill-bar-html;
-    }
-    }
+      .education-date{
+          color: $dark-mode-text-border;
+      }
+      .headerResume-icon{
+        color: $dark-mode-text-border;
+      }
   }
 
 .contact-container{ 
     @include background-dark;
-        .contact-call{
-            background-color: $dark-mode-navbar-bg;
-            
-            .contact-icon{
-                color: $dark-mode-text-border;
-            }
-        }
-        input[type=submit]{
-            background-color: $dark-mode-text-border;
-            color: $dark-mode-text-button
-        }
+        
+    .contactDetails-container{
+      background-color: $dark-mode-navbar-bg;
+      
+      .contactDetails-icon{
+          color: $dark-mode-text-border;
+      }
+    }
+    .contactInput-button{     
+      input[type=submit]{
+          background-color: $dark-mode-text-border;
+          color: $dark-mode-text-button;
+      }
+    }
   }
   .themeChanger{
     .themeChanger-icon{
@@ -287,23 +242,20 @@ body.dark-mode{
   @include background-dark;
   color: $dark-mode-text;
 
-  .portfolio-project{
+  .project{
     background-color: $dark-mode-text-border;
-
-    p{
-      color: $dark-mode-text-button;
-  }
   }
 }
 .services-container{
   @include background-dark;
-      .services-box{
-          border: 1px dashed $dark-mode-text-border;
 
-          .services-icon{
-              color: $dark-mode-text-border;
-          }
+  .service-box{
+      border: 1px dashed $dark-mode-text-border;
+
+      .service-icon{  
+        color: $dark-mode-text-border;
       }
+    }
   }
 }
 
@@ -320,15 +272,25 @@ code {
   position: relative;
   height: min-content;
 
-  @media screen and (max-width: 400px){
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
+  
   .toggle{
     position: absolute;
     right: 5%;
     top: 1%;
+  }
+}
+@media screen and (max-width: 400px){
+  .App{
+    width: 90%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+
+    .toggle{
+      position: absolute;
+      left: 1%;
+      margin-top: 5px;
+      z-index: 1000;
+    }
   }
 }

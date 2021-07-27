@@ -5,6 +5,8 @@ import { MdCall } from 'react-icons/md';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { IoLocationSharp } from 'react-icons/io5';
 import Navbar from '../Navbar/Navbar';
+import ContactDetails from './ContactDetails/ContactDetails';
+import ContactInput from './ContactInput/ContactInput';
 
 
 function Contact() {
@@ -13,49 +15,15 @@ function Contact() {
         <Navbar />
         <div className="contact-container">
             <h1>Contact</h1>
-            <div className="contact">
-                <div className="contact-call">
-                    <MdCall className="contact-icon" />
-                    <div className="contact-details">
-                        <p>Call Me</p>
-                        <p>+385 97 769 1991</p>
-                    </div>
-                </div>
-
-                <div className="contact-call">
-                    <HiOutlineMailOpen className="contact-icon" />
-                    <div className="contact-details">
-                        <p>E-mail</p>
-                        <p>ivozilic@hotmail.com</p>
-                    </div>
-                </div>
-
-                <div className="contact-call">
-                    <IoLocationSharp className="contact-icon" />
-                    <div className="contact-details">
-                        <p>Location</p>
-                        <p>Zagreb, Croatia</p>
-                    </div>
-                </div>
+            <div className="contact">  
+                <ContactDetails Icon={HiOutlineMailOpen} title="E-mail" desc="ivozilic@hotmail.com" />
+                <ContactDetails Icon={MdCall} title="Call Me" desc="+385 97 769 1991" />
+                <ContactDetails Icon={IoLocationSharp} title="Location" desc="Zagreb, Croatia" />
             </div>
 
             <div className="contact-inputs">
                 <h1>Get In Touch</h1>
-                <form>
-                    <div className="contact-input">
-                        <div className="contact-name-email">
-                            <input type="text" placeholder="Name" />
-                            <input type="text" placeholder="E-mail" />
-                        </div>
-                        <div className="contact-subject">
-                            <input type="text" placeholder="Subject" />
-                        </div>
-                        <div className="contact-area">
-                            <textarea placeholder="Message" />
-                        </div>
-                            <input type="submit" value="Send Message" />
-                    </div>
-                </form>
+                <ContactInput />
             </div>
         </div>
         </>

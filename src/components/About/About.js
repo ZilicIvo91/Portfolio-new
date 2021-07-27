@@ -2,9 +2,8 @@ import React from 'react';
 import './About.scss';
 import picture from '../../images/picture.jpg'
 import { GiMusicalScore } from 'react-icons/gi';
-import { FcSportsMode } from 'react-icons/fc';
 import { GiCookingPot } from 'react-icons/gi';
-import { BiCameraMovie } from 'react-icons/bi';
+import { BiCameraMovie, BiFootball } from 'react-icons/bi';
 import { GiBookshelf } from 'react-icons/gi';
 import CV_Zilic_Ivo from '../../CV/CV_Zilic_Ivo.pdf';
 import Navbar from '../Navbar/Navbar';
@@ -12,6 +11,9 @@ import { Link } from 'react-router-dom';
 import { AiOutlineProfile } from 'react-icons/ai';
 import { RiToolsFill } from 'react-icons/ri';
 import { MdWork } from 'react-icons/md';
+import InterestIcon from './Interest/Interest';
+import MyJourney from './MyJourney/MyJourney';
+
 
 function About() {
     return (
@@ -42,59 +44,19 @@ function About() {
                     <div className="myJourney-container">
                         <h2>My Journey</h2>
                             <div className="about-myJourneys">
-                                <div className="about-myJourney">
-                                    <div>
-                                        <p><AiOutlineProfile className="myJourney-icon" /></p>
-                                    </div>
-                                    <div className="myJourney-text">
-                                        <p>3 Projects</p>
-                                        <p>Complited</p>
-                                    </div>    
-                                </div>
-                                <div className="about-myJourney">
-                                    <div>
-                                        <p><MdWork className="myJourney-icon" /></p>
-                                    </div>
-                                    <div className="myJourney-text">
-                                        <p>FreeLance</p>
-                                        <p>Avaliable</p>
-                                    </div>
-                                </div>
-                                <div className="about-myJourney">    
-                                    <div>
-                                        <p><RiToolsFill className="myJourney-icon" /></p>
-                                    </div>
-                                    <div className="myJourney-text">
-                                        <p>Support</p>
-                                        <p>24/7</p>
-                                    </div>
-                                </div>
-                               
+                                <MyJourney Icon={AiOutlineProfile} title="3 Projects" desc="Complited" />
+                                <MyJourney Icon={MdWork} title="3 FreeLance" desc="Avaliable" />
+                                <MyJourney Icon={RiToolsFill} title="3 Support" desc="24/7" />    
                             </div>
                         </div>
-                        <div>
+                        <div className="interest-container">
                             <h2 className="interest-header">My Interests</h2>
                             <div className="about-interests">
-                                <div className="about-interest">
-                                    <p><GiMusicalScore className="interest-icon" /></p>
-                                    <p>Music</p>
-                                </div>
-                                <div className="about-interest">
-                                    <p><FcSportsMode className="interest-icon" /></p>
-                                    <p>Sport</p>
-                                </div>
-                                <div className="about-interest">
-                                    <p><GiCookingPot className="interest-icon" /></p>
-                                    <p>Cooking</p>
-                                </div>
-                                <div className="about-interest">
-                                    <p><BiCameraMovie className="interest-icon" /></p>
-                                    <p>Movie</p>
-                                </div>
-                                <div className="about-interest">
-                                    <p><GiBookshelf className="interest-icon" /></p>
-                                    <p>Books</p>
-                                </div>
+                                <InterestIcon Icon={GiMusicalScore} title="Music" />
+                                <InterestIcon Icon={BiFootball} title="Sport" />
+                                <InterestIcon Icon={GiCookingPot} title="Cooking" />
+                                <InterestIcon Icon={BiCameraMovie} title="Movie" />
+                                <InterestIcon Icon={GiBookshelf} title="Books" />
                             </div>
                     </div>
                 </div>

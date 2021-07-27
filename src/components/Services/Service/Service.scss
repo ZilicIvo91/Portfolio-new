@@ -1,0 +1,26 @@
+@import "../../../sass/theme.scss" ;
+
+.service-box{
+        width: 20%;
+        height: 300px;
+        border: 1px dashed $light-mode-text-border;
+        padding: 20px;
+        margin-left: 175px;
+        margin-top: 50px;
+
+        .service-icon{
+            margin-top: 20px;
+            font-size: 3.5rem;
+            color: $light-mode-text-border;
+        }
+
+        h2{
+            font-size: 1.5rem;
+        }
+}
+@media screen and (max-width: 400px){
+    .service-box{
+        width: 60%;
+        margin: 20px auto;
+    }
+}

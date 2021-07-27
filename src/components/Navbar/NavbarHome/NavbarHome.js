@@ -14,7 +14,6 @@ function NavbarHome() {
     return (
         <>
             <div className="navbarHome-sideBar">
-
                 <h1>Žilić</h1>
                 {Links.map((link) => {
                     return(

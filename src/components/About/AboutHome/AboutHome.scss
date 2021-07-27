@@ -2,13 +2,17 @@
 
 .aboutHome-container{
     text-align: center;
-    width: 38%;
+    width: 35%;
     border: 5px solid $light-mode-text-border;
     background-color: $light-mode-navbar-bg;
     margin-left: 60%;
-    margin-top: -33.4%;
+    margin-top: -12.5%;
     font-size: 0.7rem;
-
+    
+    .aboutHome-header{
+        padding-top: 10px;
+    }
+    
     .aboutHome-profile{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -35,28 +39,30 @@
             h1{
                 color: $light-mode-text-border;
             }
-            .aboutHome-button{
-                width: 80px;
-                height: 35px;
-                border-radius: 5px;
-                margin: 10px;
-                background-color: $light-mode-text-border;                
-                
-                a{
-                    color: $dark-mode-text;
-                    text-decoration: none;
-                    font-size: 0.6rem;
-                    font-weight: bold   
+            .aboutHome-buttons{
+                .aboutHome-btnFirst{
+                    width: 80px;
+                    height: 35px;
+                    border-radius: 5px;
+                    margin: 10px 10px 10px 0;
+                    background-color: $light-mode-text-border;                
+                    cursor: pointer;
+                    a{
+                        color: $dark-mode-text;
+                        text-decoration: none;
+                        font-size: 0.6rem;
+                        font-weight: bold   
+                    }
                 }
-            }
-            .aboutHome-buttontwo{
-                @extend .aboutHome-button;
-                background-color: $light-mode-text-button;
-                color: $light-mode-text-border;     
-                border: 1px solid $light-mode-text-border;
-                a{
-                    text-decoration: none;
+                .aboutHome-buttontwo{
+                    @extend .aboutHome-btnFirst;
+                    background-color: $light-mode-text-button;
                     color: $light-mode-text-border;     
+                    border: 1px solid $light-mode-text-border;
+                    a{
+                        text-decoration: none;
+                        color: $light-mode-text-border;     
+                    }
                 }
             }
         }
@@ -64,57 +70,18 @@
     }
 
     h2{
-        text-align: start;
-        margin-left: 25px;
+        text-align: center;
+        margin-left: -50px;
     }
 
     .aboutHome-myJourneys{
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-right: 30px;
-
-        .aboutHome-myJourney{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-
-            .myJourney-icon{
-                font-size: 1.5rem;
-                margin-top: 10px;
-                margin-left: 30px;
-                color: $light-mode-text-border;
-                border: 1px dashed $light-mode-text-border;
-                border-radius: 7px;
-                padding: 2px;
-            }
-            .myJourney-text{
-                margin-top: 10px;
-                line-height: 10px;
-                :last-child{
-                    color: $light-mode-text-border;
-                }
-            }
-        }
     }
 
     .aboutHome-interests{
         display: grid;
-        grid-template-columns: 75px 75px 75px;
-
-        .aboutHome-interest{
-            display: flex;
-            flex-direction: row;
-
-            p:last-child{
-                margin-top: 30px;
-                margin-left: -15px;
-            }
-
-            .interest-icon{
-                font-size: 1.7rem;
-                margin-top: 15px;
-                margin-right: 20px;
-                color: $light-mode-text-border;
-            }
-        }
+        grid-template-columns: 100px 100px 100px;
     }
 }

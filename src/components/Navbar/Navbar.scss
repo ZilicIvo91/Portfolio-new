@@ -8,7 +8,9 @@
     border-right: 4px solid black;
     height: 100vh;
     position: fixed;
+    font-size: 1.2rem;
     background-color: $light-mode-navbar-bg;
+
     h1{
        width: 100px;
        margin: 15px 110px;
@@ -17,13 +19,12 @@
             color: $light-mode-text-border;
         }
     }
-
     .navbar-links{
         width: 100px;
         display: flex;
         flex-direction: row;
         margin: -10px 100px;
-    
+        
         a{
             display: flex;
             flex-direction: row;
@@ -31,10 +32,15 @@
             text-decoration: none;
             line-height: 15px;
         }
-
+        
         .navbar-link{
             margin-left: 10px;
         }
+        
+    }
+    .navbar-links-active {
+        @extend .navbar-links;
+        font-weight: bold;
     }
 
     .navbar-footer{
@@ -49,7 +55,7 @@
             
             .icon{
                 color: black;
-                font-size: 1.4rem;
+                font-size: 1.7rem;
             }
         }
         .navbar-copy{
@@ -57,40 +63,62 @@
         }
     }
 }
+.navbar-links-active{
+    color: red;
+}
 @media screen and (max-width: 400px){
-    .menu-icon{
-        display: block;
-        width: 50px;
-        height: 30px;
+    .navbar-container{
+        width: 100%;
         position: relative;
-        font-size: 1.5rem;
-        z-index: 100;
-        margin: 20px 30px 10px;
-        color: $light-mode-text-border;
-        border-radius: 5px;
-        background-color: white;
-    }
-    .navbar-sideBar{
-        position: relative;
-        width: 80%;
-        height: 400px;
-        margin: 0px 40px;
-        border: 4px solid black;
-        border-radius: 30px;
-        h1{
-            margin: 10px 35%;
+        margin-top: 10px;
+
+        .menu-icon{
+            display: block;
+            width: 40px;
+            height: 30px;
+            position: absolute;
+            font-size: 1.5rem;
+            z-index: 100;
+            color: $light-mode-text-border;
+            border-radius: 5px;
+            background-color: white;
+            left: 62%;
+            top: 2%;
         }
-        .navbar-links{
-            margin: -10px 30%;
-            &:hover{
-                font-weight: bold;
+        .navbar-sideBar{
+            position: relative;
+            width: 90%;
+            height: min-content;
+            margin: 0px auto;
+            border: 4px solid black;
+            border-radius: 30px;
+
+            h1{
+                width: 100%;
+                margin: 10px 0;
+                text-align: center;
             }
-            a{
-                width: 50%;
+            .navbar-links-container{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0px auto;
+            }
+            .navbar-footer{
+                position: relative;
+                height: min-content;
+                margin: 0px;
+                font-size: 0.5rem;
+                margin-top: 20px;
+
+                .icon{
+                    font-size: 1.3rem;
+                }
             }
         }
-    }
-    .none{
-        display: none;
+        .none{
+            display: none;
+        }
     }
 }
