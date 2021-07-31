@@ -5,6 +5,7 @@
 }
 .home-container{
     @include background-light;
+    height: 100vh;
     
     .home{
         margin: 2%;
@@ -52,17 +53,14 @@
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
     .home-about, .home-container{
         display: none;
     }
     .home-mobile{
         display: block;
         @include background-light;
-
-        .home-navbar-mobile{
-            width: 80%;
-        }
+        
         .home-title-mobile{
             width: 80%;
             height: 500px;

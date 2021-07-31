@@ -10,7 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 body{
-  max-height: 100vh; 
   color: $light-mode-text;
   @include background-light;
   transition: 1.5s;
@@ -270,7 +269,6 @@ code {
   display: flex;
   flex-direction: row;
   position: relative;
-  height: min-content;
 
   
   .toggle{
@@ -279,18 +277,21 @@ code {
     top: 1%;
   }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
+  body{
+    width: 100%;
+  }
   .App{
-    width: 90%;
+    width: 100%;
+    height: min-content;
     margin: 0px;
     display: flex;
     flex-direction: column;
 
     .toggle{
-      position: absolute;
-      left: 1%;
-      margin-top: 5px;
-      z-index: 1000;
+      position: relative;
+      margin: 0;
+      padding: 10px 0px 0px 60px;
     }
   }
 }

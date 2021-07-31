@@ -11,12 +11,14 @@
         color: $light-mode-text-border;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
     .headerResume-header{
         width: 100%;
-        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .headerResume-icon{
-            margin: 0;
+            margin: 0px 10px;
         }
     }
 }

@@ -6,33 +6,19 @@ import { FaFacebook } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiFillGithub } from 'react-icons/ai';
 import { AiOutlineInstagram } from 'react-icons/ai';
-import { FaTimes } from 'react-icons/fa';
-import { FaBars } from 'react-icons/fa';
 
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-    const [clicked, setClicked] = useState(false);
-    const [value, setValue] = useState("");
-
-    const handleClick = (index) => {
-        setClicked(!clicked);
-        setValue(index);
-    }
-    
     return (
         <div className="navbar-container">
-        <button className='menu-icon' onClick={() => setClicked(!clicked)}>
-                {clicked ? <FaBars /> : <FaTimes />}
-            </button>
-            <div className={clicked ? "navbar-sideBar none" : "navbar-sideBar" }>
+            <div className="navbar-sideBar">
                 <h1>Žilić</h1>
                 <div className="navbar-links-container">
-                    {Links.map((link, index) => {
+                    {Links.map((link) => {
                         return(
                         <div key={link.id} 
-                        className={index === value ? 'navbar-links-active' : 'navbar-links'} 
-                        onClick={() => handleClick(index)}>
+                        className="navbar-links">
                             <Link to={link.url}>
                                 <div className="navbar-link">
                                     <p>{link.icon}</p>

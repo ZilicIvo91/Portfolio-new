@@ -5,10 +5,11 @@
     width: 35%;
     border: 5px solid $light-mode-text-border;
     background-color: $light-mode-navbar-bg;
-    margin-left: 60%;
-    margin-top: -12.5%;
     font-size: 0.7rem;
-    
+    position: relative;
+    bottom: 35.3%;
+    left: 60%;
+
     .aboutHome-header{
         padding-top: 10px;
     }
@@ -77,11 +78,10 @@
     .aboutHome-myJourneys{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-right: 30px;
     }
 
     .aboutHome-interests{
         display: grid;
-        grid-template-columns: 100px 100px 100px;
+        grid-template-columns: 90px 90px 90px;
     }
 }

@@ -11,11 +11,11 @@
         color: $light-mode-text-border;
     }
     .interestIcon-title{
-        margin: 20px 20px;
+        margin: 20px 10px;
         color: $light-mode-text;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
     .interest{
         justify-content: center;
         align-items: center;

@@ -16,9 +16,9 @@
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
     .resume-wrapper{
-        width: 90%;
+        width: 100%;
         margin: 0px;
 
         h1{
@@ -32,8 +32,13 @@
             margin: 0px;
         }
         .resume-title{
-            border: 1px solid red;
             width: 100%;
+            .resume-elements{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }
