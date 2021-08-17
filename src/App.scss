@@ -8,11 +8,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-body{
   color: $light-mode-text;
-  @include background-light;
   transition: 1.5s;
+  box-sizing: border-box;
+  
+  @include background-light;
 }
 
 body.dark-mode{

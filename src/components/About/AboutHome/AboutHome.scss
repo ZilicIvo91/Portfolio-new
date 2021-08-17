@@ -7,7 +7,7 @@
     background-color: $light-mode-navbar-bg;
     font-size: 0.7rem;
     position: relative;
-    bottom: 35.3%;
+    bottom: 33%;
     left: 60%;
 
     .aboutHome-header{
@@ -78,10 +78,12 @@
     .aboutHome-myJourneys{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin: 20px;
     }
 
     .aboutHome-interests{
         display: grid;
-        grid-template-columns: 90px 90px 90px;
+        grid-template-columns: auto auto auto;
+        margin-top: 20px;
     }
 }

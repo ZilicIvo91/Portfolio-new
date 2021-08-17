@@ -1,18 +1,12 @@
 import React from 'react';
 import './About.scss';
 import picture from '../../images/picture.jpg'
-import { GiMusicalScore } from 'react-icons/gi';
-import { GiCookingPot } from 'react-icons/gi';
-import { BiCameraMovie, BiFootball } from 'react-icons/bi';
-import { GiBookshelf } from 'react-icons/gi';
 import CV_Zilic_Ivo from '../../CV/CV_Zilic_Ivo.pdf';
 import Navbar from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
-import { AiOutlineProfile } from 'react-icons/ai';
-import { RiToolsFill } from 'react-icons/ri';
-import { MdWork } from 'react-icons/md';
-import InterestIcon from './Interest/Interest';
-import MyJourney from './MyJourney/MyJourney';
+import InterestBEM from './Interest/InterestBEM';
+import { Interest } from '../../service/Interest';
+import { Journey } from '../../service/Journey';
 
 
 function About() {
@@ -44,19 +38,27 @@ function About() {
                     <div className="myJourney-container">
                         <h2>My Journey</h2>
                             <div className="about-myJourneys">
-                                <MyJourney Icon={AiOutlineProfile} title="3 Projects" desc="Complited" />
-                                <MyJourney Icon={MdWork} title="3 FreeLance" desc="Avaliable" />
-                                <MyJourney Icon={RiToolsFill} title="3 Support" desc="24/7" />    
+                            {Journey.map((journey) => {
+                                    return(
+                                        <div key={journey.id}>
+                                            <InterestBEM Icon={journey.icon} title={journey.title} desc={journey.desc} />
+                                        </div>
+                                    )
+                                })}
+
+                            
                             </div>
                         </div>
                         <div className="interest-container">
                             <h2 className="interest-header">My Interests</h2>
                             <div className="about-interests">
-                                <InterestIcon Icon={GiMusicalScore} title="Music" />
-                                <InterestIcon Icon={BiFootball} title="Sport" />
-                                <InterestIcon Icon={GiCookingPot} title="Cooking" />
-                                <InterestIcon Icon={BiCameraMovie} title="Movie" />
-                                <InterestIcon Icon={GiBookshelf} title="Books" />
+                                {Interest.map((interest) => {
+                                    return(
+                                        <div key={interest.id}>
+                                            <InterestBEM Icon={interest.icon} title={interest.title} />
+                                        </div>
+                                    )
+                                })}
                             </div>
                     </div>
                 </div>
