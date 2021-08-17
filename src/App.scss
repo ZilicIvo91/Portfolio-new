@@ -55,26 +55,61 @@ body.dark-mode{
       }
   }
     }
-    .myJourneys{
-      .myJourney-icon{ 
-            color: $dark-mode-text-border;
-            border: 1px dashed $dark-mode-text-border;   
-          }
-          .myJourney-text{
-              :last-child{
-                  color: $dark-mode-text-border;
-              }
-    }
   }
-    .interest{
-      .interestIcon-icon{
+  .interest {
+    $this: &;
+    width: 100%;
+    margin: 5px;
+
+    &__inner {
+        display: flex;
+        width: 100%;
+    }
+
+    &__holder {
+        &--left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__image-wrapper {
+      padding: 2px;
+      
+      #{$this}--extended & {
+          border: 1px dashed $dark-mode-text-border;
+          border-radius: 10px;
+      }
+    }
+
+    &__icon {
+        height: 40px;
+        width: 40px;
         color: $dark-mode-text-border;
-      }
-      .interestIcon-title{
-        color: $dark-mode-text;
-      }
     }
-  }
+
+    &__text {
+        margin-bottom: 0;
+        margin-left: 10px;
+
+        &--title {
+            margin-top: 0;
+            color: $dark-mode-text;
+        }
+
+        &--description {
+            margin-top: 5px;
+            color: $dark-mode-text-border;
+        }
+    }
+}
   .navbar-sideBar{
     background-color: $dark-mode-navbar-bg;
     color: $dark-mode-text;
