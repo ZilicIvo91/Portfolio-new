@@ -15,14 +15,14 @@ function Resume() {
     return (
         <>
         <Navbar />
-        <div className="resume-wrapper">
+        <div className="resume">
             <h1>Resume</h1>
-            <div className="resume-container">
-                <div className="resume-title">
-                    <div className="resume-header">
+            <div className="resume__container">
+                <div className="resume__title">
+                    <div className="resume__header">
                         <HeaderResume Icon={FaUserGraduate} title="Education" />
                     </div>
-                    <div className="resume-elements">
+                    <div className="resume__elements">
                         <Education Icon={AiOutlineArrowRight} title="Frontend Developer" desc="Algebra University College, Zagreb" date="03.2020 - 09.2020" />
                         <Education Icon={AiOutlineArrowRight} title="Project Challeng IT" desc="Education Xamarin, Slavonski Brod" date="03.2019 - 07.2019" />
                         <Education Icon={AiOutlineArrowRight} title="Faculty of Mining, Geology, and Petroleum Engineering" desc="Master's degree, Zagreb" date="2014 - 2017" />
@@ -31,20 +31,20 @@ function Resume() {
                     </div>
                 </div>
                 
-                <div className="resume-title">
-                    <div className="resume-header">
+                <div className="resume__title">
+                    <div className="resume__header">
                         <HeaderResume Icon={FaBriefcase} title="Expirience" />
                     </div>
-                    <div className="resume-elements">
+                    <div className="resume__elements">
                         <Education Icon={AiOutlineArrowRight} title='Freelancer, Web developer' desc="freelancer.com" date="Dec 2020 - Now" />  
                     </div>
                 </div>
 
-                <div className="resume-title">
-                    <div className="resume-header">
+                <div className="resume__title">
+                    <div className="resume__header">
                         <HeaderResume Icon={FaCode} title="Programing skills" />
                     </div>
-                    <div className="resume-elements">
+                    <div className="resume__elements">
                         <Skill skill="HTML" percentage="90%" />
                         <Skill skill="CSS" percentage="80%" />
                         <Skill skill="JavaScript" percentage="70%" />
@@ -55,11 +55,11 @@ function Resume() {
                     </div>
                 </div>
                 
-                <div className="resume-title">
-                    <div className="resume-header">
+                <div className="resume__title">
+                    <div className="resume__header">
                         <HeaderResume Icon={RiToolsFill} title="Other skills" />
                     </div>
-                    <div className="resume-elements">
+                    <div className="resume__elements">
                         <Skill skill="German" percentage="90%" />
                         <Skill skill="English" percentage="70%" />
                         <Skill skill="Self-organization" percentage="80%" />

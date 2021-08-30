@@ -1,38 +1,40 @@
 @import '../../sass/theme.scss';
 
-.resume-wrapper{
+.resume{
     width: 100%;
     margin-left: 300px;
     @include background-light;
     
+    @media screen and (max-width: 450px){
+        width: 100%;
+        margin: 20px 0;
+    }
+
+
     h1{
         text-align: center;
         margin-right: 200px;
+
+        @media screen and (max-width: 450px){
+            width: 100%;
+        }
     }
-    .resume-container{
+    &__container{
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 50px 300px;
+
+        @media screen and (max-width: 450px){
+            width: 100%;
+            grid-template-columns: 1fr;
+            margin: 0px;
+        }
     }
 }
 
 @media screen and (max-width: 450px){
-    .resume-wrapper{
+    .resume__title{
         width: 100%;
-        margin: 0px;
-
-        h1{
-            width: 100%;
-            text-align: center;
-        }
-        .resume-container{
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-            margin: 0px;
-        }
-        .resume-title{
-            width: 100%;
             .resume-elements{
                 display: flex;
                 flex-direction: column;
@@ -41,4 +43,3 @@
             }
         }
     }
-}

@@ -1,35 +1,35 @@
 @import '../../../sass/theme.scss';
 
-.skill-el-box{
+.skill{
     margin: auto 50px;
     width: 100%;
-
     
-    .skill-list-element-bar{
+        @media screen and (max-width: 450px){ 
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
+    
+    &__list-element-bar{
         width: 60%;
         height: 15px;
         background-color: white;
         border: 1px solid black;
         margin-bottom: 50px;
         
-        .skill-bar{
-            width: 90%;
-            height: 15px;
-            background-color: $light-mode-text-border;
+        @media screen and (max-width: 450px){ 
+            margin: 20px 25%;
         }
+    }
+
+    &__bar{
+        width: 90%;
+        height: 15px;
+        background-color: $light-mode-text-border;
     }
 }
 @media screen and (max-width: 450px){
-    .skill-el-box{
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        .skill-list-element-name{
-            margin-left: 10%;
-        }
-
-        .skill-list-element-bar{
-            margin: 20px 25%;
-        }
+    .skill-list-element-name{
+        margin-left: 10%;
     }
 }

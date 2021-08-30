@@ -8,12 +8,12 @@ export default function Skill({ skill, percentage }) {
     };
 
     return (
-        <div className="skill-el-box">
-            <div className="skill-list-element-name">
+        <div className="skill">
+            <div className="skill__list-element-name">
                 <h4>{skill}</h4>
             </div>
-            <div className="skill-list-element-bar">
-                <div className="skill-bar" style={mystyle}></div>
+            <div className="skill__list-element-bar">
+                <div className="skill__bar" style={mystyle}></div>
             </div>
         </div>
     )

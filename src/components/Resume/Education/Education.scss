@@ -1,31 +1,28 @@
 @import '../../../sass/theme.scss';
 
-.education-header{
+.education{
     width: 70%;
     display: grid;
     grid-template-columns: 100px 1fr;
     line-height: 20px;
     font-size: 1.1rem;
     margin-bottom: 10px;
+
+        @media screen and (max-width: 450px){
+            width: 80%;
+            margin: 0;
+        }
     
-    .education-icon{
+    &__icon{
         margin-left: 50px;
         margin-top: 25px;
         color: $light-mode-text-border;
     }
     
-    .education-date{
+    &__date{
         color: $light-mode-text-border;
         font-size: 1.1rem;
         font-family: italic;
         line-height: 1px;
     }
-}
-@media screen and (max-width: 400px){
-    .education-header{
-        width: 80%;
-        margin: 0;
-        border: 1px solid black;
-    }
-
 }
