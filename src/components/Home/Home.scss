@@ -6,7 +6,7 @@
 .home-container{
     @include background-light;
     height: 100vh;
-    
+
     .home{
         margin: 2%;
         border: 6px solid $light-mode-text-border;
@@ -15,7 +15,8 @@
         border-radius: 30px;
         width: 50%;
         font-size: 0.7rem;
-    
+        
+        
     .home-links{
         width: 100px;
         display: flex;

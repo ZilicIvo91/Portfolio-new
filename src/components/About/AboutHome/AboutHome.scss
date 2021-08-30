@@ -1,30 +1,30 @@
 @import '../../../sass/theme.scss';
 
-.aboutHome-container{
+.aboutHome{
     text-align: center;
     width: 35%;
     border: 5px solid $light-mode-text-border;
     background-color: $light-mode-navbar-bg;
     font-size: 0.7rem;
     position: relative;
-    bottom: 33%;
+    bottom: 31.5%;
     left: 60%;
 
-    .aboutHome-header{
+    &__header{
         padding-top: 10px;
     }
     
-    .aboutHome-profile{
+    &__holder{
         display: grid;
         grid-template-columns: 1fr 1fr;
-
-        .aboutHome-img{
-            margin-left: 80px;
-            margin-top: 40px;
-            width: 120px;
-            height: 120px;
-            background-color: $light-mode-text-border;
-            position: relative;
+    }
+    &__image--wrapper{
+        margin-left: 80px;
+        margin-top: 40px;
+        width: 120px;
+        height: 120px;
+        background-color: $light-mode-text-border;
+        position: relative;
 
             img{
                 width: 130px;
@@ -33,57 +33,63 @@
                 left: 10px;
             }
         }
-        .aboutHome-text{
-            text-align: justify;
-            width: 80%;
+    &__text{
+        text-align: justify;
+        width: 80%;
 
             h1{
                 color: $light-mode-text-border;
             }
-            .aboutHome-buttons{
-                .aboutHome-btnFirst{
-                    width: 80px;
-                    height: 35px;
-                    border-radius: 5px;
-                    margin: 10px 10px 10px 0;
-                    background-color: $light-mode-text-border;                
-                    cursor: pointer;
-                    a{
-                        color: $dark-mode-text;
-                        text-decoration: none;
-                        font-size: 0.6rem;
-                        font-weight: bold   
-                    }
+        }
+            &__buttons{
+                width: 70%;
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+            &__button{
+                width: 80px;
+                a{
+                    box-shadow: 
+                    3px 3px 3px $light-mode-text;
+                    border-radius: 10px;
+                    width: 200px;
+                    background-color: $light-mode-text-border;
+                    color: $dark-mode-text;  
+                    text-align: center;
+                    padding-top: 5px;
+                    text-decoration: none;
                 }
-                .aboutHome-buttontwo{
-                    @extend .aboutHome-btnFirst;
-                    background-color: $light-mode-text-button;
+        
+                &--second{
                     color: $light-mode-text-border;     
                     border: 1px solid $light-mode-text-border;
                     a{
-                        text-decoration: none;
-                        color: $light-mode-text-border;     
+                        background-color: $light-mode-text-button;
+                        color: $light-mode-text-border;
                     }
                 }
             }
-        }
-        
-    }
-
-    h2{
-        text-align: center;
-        margin-left: -50px;
-    }
-
-    .aboutHome-myJourneys{
+    &__icons{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 20px;
+        margin-top: 40px;
     }
-
-    .aboutHome-interests{
+    &__journey__icons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 0.6rem;
+        margin-left: 15px;
+    }
+    &__interest__header{
+        width: 70%;
+    }
+    &__interest__icons{
         display: grid;
         grid-template-columns: auto auto auto;
-        margin-top: 20px;
+        width: 80%;
+        font-size: 0.7rem;
     }
 }

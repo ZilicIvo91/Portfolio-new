@@ -23,63 +23,46 @@ body.dark-mode{
   
   .themeChanger{
     background-color: $dark-mode-navbar-bg;
+    
+    &__icon{
+      color: $dark-mode-text-border;
+    }
   }
   
-  .aboutHome-container{
+  .aboutHome{
     border: 4px solid $dark-mode-text-border;
     background-color: $dark-mode-navbar-bg;
 
-    .aboutHome-img{
+    &__image--wrapper{
       background-color: $dark-mode-text-border;
     }
 
-      .aboutHome-text{
+    &__text{
         h1{
           color: $dark-mode-text-border;
         }
-    .aboutHome-buttons{
-      .aboutHome-btnFirst{
-          background-color: $dark-mode-text-border;                 
-          a{
-              color: $light-mode-text;
-          }
+    
+    }
+    &__button{
+      a{
+          box-shadow: 
+          3px 3px 3px $dark-mode-text;
+          background-color: $dark-mode-text-border;
+          color: $light-mode-text;  
       }
-      .aboutHome-buttontwo{
-          @extend .aboutHome-btnFirst;
-          background-color: $dark-mode-text-button;
+
+      &--second{
           color: $dark-mode-text-border;     
           border: 1px solid $dark-mode-text-border;
           a{
-              color: $dark-mode-text-border;     
+              background-color: $dark-mode-text-button;
+              color: $dark-mode-text-border;
           }
       }
-  }
     }
   }
   .interest {
     $this: &;
-    width: 100%;
-    margin: 5px;
-
-    &__inner {
-        display: flex;
-        width: 100%;
-    }
-
-    &__holder {
-        &--left {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        &--right {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
-
     &__image-wrapper {
       #{$this}--extended & {
           border: 1px dashed $dark-mode-text-border;
@@ -87,22 +70,15 @@ body.dark-mode{
     }
 
     &__icon {
-        height: 40px;
-        width: 40px;
         color: $dark-mode-text-border;
     }
 
     &__text {
-        margin-bottom: 0;
-        margin-left: 10px;
-
-        &--title {
-            margin-top: 0;
+        &--title {  
             color: $dark-mode-text;
         }
 
         &--description {
-            margin-top: 5px;
             color: $dark-mode-text-border;
         }
     }
@@ -115,6 +91,7 @@ body.dark-mode{
            color: $dark-mode-text-border;
        }
    }
+   
 
    .navbar-links{
     color: $dark-mode-text;
@@ -253,47 +230,42 @@ body.dark-mode{
     }
   }
 }
-  .resume-wrapper{
+  .resume{
     @include background-dark;
 
-    .skill-bar{
+    .skill__bar{
       background-color: $dark-mode-text-border;
       }
 
-      .education-icon{
+      .education__icon{
         color: $dark-mode-text-border;
       }
 
-      .education-date{
+      .education__date{
           color: $dark-mode-text-border;
       }
-      .headerResume-icon{
+      .headerResume__icon{
         color: $dark-mode-text-border;
       }
   }
 
-.contact-container{ 
+.contact{ 
     @include background-dark;
         
-    .contactDetails-container{
+    .contactDetails{
       background-color: $dark-mode-navbar-bg;
       
-      .contactDetails-icon{
+      &__icon{
           color: $dark-mode-text-border;
       }
     }
-    .contactInput-button{     
+    .contactInput__button{     
       input[type=submit]{
           background-color: $dark-mode-text-border;
           color: $dark-mode-text-button;
       }
     }
   }
-  .themeChanger{
-    .themeChanger-icon{
-        color: $dark-mode-text-border;
-    }
-}
 .portfolio-contrainer{
   @include background-dark;
   color: $dark-mode-text;
@@ -302,13 +274,13 @@ body.dark-mode{
     background-color: $dark-mode-text-border;
   }
 }
-.services-container{
+.services{
   @include background-dark;
 
-  .service-box{
+  .service{
       border: 1px dashed $dark-mode-text-border;
 
-      .service-icon{  
+      &__icon{  
         color: $dark-mode-text-border;
       }
     }
