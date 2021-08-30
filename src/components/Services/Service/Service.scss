@@ -1,6 +1,6 @@
 @import "../../../sass/theme.scss" ;
 
-.service-box{
+.service{
         width: 20%;
         height: 300px;
         border: 1px dashed $light-mode-text-border;
@@ -8,19 +8,18 @@
         margin-left: 175px;
         margin-top: 50px;
 
-        .service-icon{
+        @media screen and (max-width: 450px){
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        &__icon{
             margin-top: 20px;
             font-size: 3.5rem;
             color: $light-mode-text-border;
         }
 
-        h2{
+        &__text{
             font-size: 1.5rem;
         }
-}
-@media screen and (max-width: 450px){
-    .service-box{
-        width: 60%;
-        margin: 20px auto;
-    }
 }
