@@ -4,9 +4,9 @@ import './ContactDetails.scss';
 
 export default function ContactDetails({ Icon, title, desc}) {
     return (
-        <div className="contactDetails-container">
-            {<Icon className="contactDetails-icon" />}
-            <div className="contactDetails-details">
+        <div className="contactDetails">
+            {<Icon className="contactDetails__icon" />}
+            <div className="contactDetails__details">
                 <p>{title}</p>
                 <p>{desc}</p>
             </div>

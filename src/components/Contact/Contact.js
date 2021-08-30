@@ -13,15 +13,15 @@ function Contact() {
     return (
         <>
         <Navbar />
-        <div className="contact-container">
+        <div className="contact">
             <h1>Contact</h1>
-            <div className="contact">  
+            <div className="contact__holder">  
                 <ContactDetails Icon={HiOutlineMailOpen} title="E-mail" desc="ivozilic@hotmail.com" />
                 <ContactDetails Icon={MdCall} title="Call Me" desc="+385 97 769 1991" />
                 <ContactDetails Icon={IoLocationSharp} title="Location" desc="Zagreb, Croatia" />
             </div>
 
-            <div className="contact-inputs">
+            <div className="contact__inputs">
                 <h1>Get In Touch</h1>
                 <ContactInput />
             </div>

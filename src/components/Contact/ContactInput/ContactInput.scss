@@ -1,91 +1,91 @@
 @import '../../../sass/theme.scss';
 
-.contactInput-input{
+.contactInput{
     margin: 0px 50px;
     
-    .contactInput-name-email{
+        @media screen and (max-width: 450px){
+            width: 100%;
+            margin: 0;
+        }
+
+    &__name__email{
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         
-        .contactInput-name, 
-        .contactInput-email{
-            width: 50%;
-            input{
-                    font-size: 1.1rem;
-                    width: 90%;
-                    border-radius: 10px;
-                    padding: 10px;
-                }
-            }
-        }
-
-        .contactInput-subject{
-            input{
-                width: 95%;
-                border-radius: 10px;
-                padding: 10px;
-                margin-top: 20px;
-                font-size: 1.1rem;
-            }
-        }
-
-        .contactInput-area{
-            textarea{
-                border: px solid black;
-                width: 95%;
-                border-radius: 10px;
-                padding: 10px;
-                height: 200px;
-                margin-top: 20px;
-                font-size: 1.1rem;
-            }
-        }
-
-        .contactInput-button{
-            text-align: center;
-            input[type=submit]{
-                margin: 30px auto;
-                height: 50px;
-                width: 200px;
-                border-radius: 10px;
-                background-color: $light-mode-text-border;
-                color: $light-mode-text-button;
-                font-size: 1.1rem;
-            }
+        @media screen and (max-width: 450px){
+            flex-direction: column;
         }
     }
-@media screen and (max-width: 450px){
-    .contactInput-input{
-        width: 100%;
-        margin: 0;
 
-        .contactInput-name-email{
-            display: flex;
-            flex-direction: column;
-
-            .contactInput-name,
-            .contactInput-email{
+    &__name, 
+    &__email{
+        width: 50%;
+        input{
+                font-size: 1.1rem;
+                width: 90%;
+                border-radius: 10px;
+                padding: 10px;
+            }
+            @media screen and (max-width: 450px){
                 width: 100%;
                 margin-top: 20px;
             }
         }
-        .contactInput-subject,
-        .contactInput-area{
-            width: 100%;
-            input, textarea{
-                width: 90%;       
-            }
-        }
-       
-        .contactInput-button{
-           margin: 0;
-           text-align: start;
 
-           input[type=submit]{
-                width: 95%;
+    &__subject{
+        input{
+            width: 95%;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+            @media screen and (max-width: 450px){
+                width: 100%;
+                input{
+                    width: 90%;       
+                }
             }
+    }
+
+    &__area{
+        textarea{
+            border: 1px solid black;
+            width: 95%;
+            border-radius: 10px;
+            padding: 10px;
+            height: 200px;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+            @media screen and (max-width: 450px){
+                width: 100%;
+                textarea{
+                    width: 90%;       
+                }
+            }
+    }
+
+    &__button{
+        text-align: center;
+        input[type=submit]{
+            margin: 30px auto;
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            background-color: $light-mode-text-border;
+            color: $light-mode-text-button;
+            font-size: 1.1rem;
+        }
+            @media screen and (max-width: 450px){
+                margin: 0;
+                text-align: start;
+     
+                input[type=submit]{
+                     width: 95%;
+                 }
         }
     }
 }
