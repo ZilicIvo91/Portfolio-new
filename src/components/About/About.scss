@@ -1,160 +1,175 @@
 @import '../../sass/theme.scss';
 
-.about-container{
+.about{
     text-align: center;
     width: 100%;
     margin-left: 300px;
     @include background-light;
+    height: 100vh;
+
+    @media screen and (max-width: 450px){
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0px;
+        height: min-content;
+    }
+
+    &__header{
+        text-align: center;
+    }
+
+    &__holder{
+        height: 55vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: 450px){
+            height: 80vh;
+            display: grid;
+            grid-template-columns: 1fr;            
+        }
+    }
+
+    &__image-wrapper{
+        width: 30%;
+        height: 48%;
+        background-color: $light-mode-text-border;            
+        margin-left: 25%;
+        margin-top: 8%;
+        position: relative;
+
+        @media screen and (max-width: 450px){
+            width: 200px;
+            height: 200px;
+            margin-left: 25%;
+            margin-top: 8%;
+            position: relative;
+        }
+
+        img{
+            position: absolute;
+            width: 100%;
+            top: -30px;
+            left: 30px;
+
+            @media screen and (max-width: 450px){
+                width: 200px;
+            }
+        }
+    }
+
+    &__text{
+        text-align: left;
+        margin: 10px 0px;
+        width: 80%;
+        font-size: 1.15rem;
+
+        @media screen and (max-width: 450px){
+            width: 100%;
+            align-items: center;
+            margin-left: 5%;
+            text-align: center;
+
+            p{
+                text-align: justify;                        
+                width: 90%;
+            }
+        }
+
+        &--header{
+            color: $light-mode-text-border;
+        }
+    }
+
+    &__buttons{
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin-top: 10px;
+
+        @media screen and (max-width: 450px){
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+        }
+    }
     
-    .about-profile{
+    &__button{
+        width: 150px;
+        a{
+            box-shadow: 
+            3px 3px 3px $light-mode-text;
+            border-radius: 10px;
+            width: 200px;
+            height: 35px;
+            background-color: $light-mode-text-border;
+            color: $dark-mode-text;  
+            text-align: center;
+            padding-top: 5px;
+            text-decoration: none;
+        }
+
+        &--second{
+            color: $light-mode-text-border;     
+            border: 1px solid $light-mode-text-border;
+            a{
+                background-color: $light-mode-text-button;
+                color: $light-mode-text-border;
+            }
+        }
+    }
+    
+    &__icons{
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: 25px;
         
-        .about-img{
-            border: 1px solid black;
-            margin-left: 25%;
-            margin-top: 5%;
-            width: 220px;
-            height: 220px;
-            background-color: $light-mode-text-border;
-            position: relative;
-
-            img{
-                width: 220px;
-                position: absolute;
-                top: -20px;
-                left: 20px;
-            }
-        }
-        
-        .about-text{
-            text-align: justify;
-            width: 80%;
-            font-size: 1.1rem;
-
-            h1{
-                color: $light-mode-text-border;
-            }
-
-            .about-button{
-                width: 120px;
-                height: 40px;
-                border-radius: 10px;
-                margin-right: 20px;
-                margin-top: 5%;
-                background-color: $light-mode-text-border;                
-                
-                a{
-                    text-decoration: none;
-                    color: $dark-mode-text;     
-                }
-            }
-            .about-buttontwo{
-                @extend .about-button;
-                background-color: $light-mode-text-button;
-                color: $light-mode-text-border;     
-                border: 1px solid $light-mode-text-border;
-                a{
-                    text-decoration: none;
-                    color: $light-mode-text-border;     
-                }
-            }
-        }
-       
-        .about-myJourneys{
+        @media screen and (max-width: 450px){
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+        }
+    }
+
+    .journey__icons{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        font-size: 1.2rem;
+
+        @media screen and (max-width: 450px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+    }   
+
+    .interest__header{
+        width: 70%;
+
+        @media screen and (max-width: 450px){
+            width: 100%;
             margin-top: 50px;
-            font-size: 1.2rem;
-        }   
+        }
     }
-    .interest-header{
-        margin-right: 30%;
-    }
-    .about-interests{
-        // border: 1px solid black;
+
+    .interest__icons{
         display: grid;
         grid-template-columns: auto auto auto;
         margin: 50px 6% 0;
         width: 80%;
-        height: 100%;
+        height: 90%;
         font-size: 1.2rem;
 
-    }
-}
-
-@media screen and (max-width: 450px){
-    .about-container{
-        width: 100%;
-        margin-top: 10px;
-        margin-left: 0px;
-        
-        .about-profile{
+        @media screen and (max-width: 450px){
             width: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-            
-            .about-img{
-                width: 50%;
-                align-items: center;
-                margin-left: 25%;
-            }
-
-            .about-text{
-                width: 100%;
-                align-items: center;
-                margin-left: 5%;
-                text-align: center;
-
-                h1{
-                    text-align: center;
-                }
-
-                p{
-                    text-align: justify;
-                    width: 90%;
-                }
-                
-                .about-btns{
-                    display: flex;
-                    justify-content: space-between;
-                    margin-left: 20px;
-                    button{
-                        font-size: 1rem;
-                    }
-                }
-            }
-            .myJourney-container{
-                width: 100%;
-                margin-top: 50px;
-
-                .about-myJourneys{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 0;
-                    
-                }
-            }
-            .interest-container{
-                width: 100%;
-                margin: 0px;
-                
-                .interest-header{
-                    margin: 20px 0px;
-                }
-                
-                .about-interests{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 0;
-                }
-            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0px;
         }
     }
 }

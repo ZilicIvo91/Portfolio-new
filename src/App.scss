@@ -81,11 +81,8 @@ body.dark-mode{
     }
 
     &__image-wrapper {
-      padding: 2px;
-      
       #{$this}--extended & {
           border: 1px dashed $dark-mode-text-border;
-          border-radius: 10px;
       }
     }
 
@@ -180,8 +177,33 @@ body.dark-mode{
       }
     }
   }
-  .about-container{
+  .about{
     @include background-dark;
+
+    &__image-wrapper{
+      background-color: $dark-mode-text-border;            
+    }
+
+    &__text--header{
+      color: $dark-mode-text-border;
+    }
+
+    &__button{
+      a{
+        box-shadow: 3px 3px 3px $dark-mode-text;
+        background-color: $dark-mode-text-border;
+        color: $light-mode-text;  
+      }
+
+      &--second{
+        color: $dark-mode-text-border;     
+        border: 1px solid $dark-mode-text-border;
+        a{
+          background-color: $dark-mode-text-button;
+          color: $dark-mode-text-border;
+      }
+      }
+    }
     
     .about-profile{
       .about-img{
