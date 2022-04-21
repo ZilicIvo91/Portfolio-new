@@ -61,11 +61,33 @@
         }
     }
 }
+
+.dark-mode .navbarHome-sideBar{
+    background-color: $dark-mode-navbar-bg;
+    
+    h1{
+      &::first-letter{
+        color: $dark-mode-text-border;
+      }
+    }
+    .navbarHome-links{
+      a{
+        color: $dark-mode-text
+      }
+    }
+    .navbarHome-footer{
+      .icon{
+        color: $dark-mode-text;
+      }
+    }
+  }
 @media screen and (max-width: 450px){
     .menu-icon{
         display: block;
     }
     .navbarHome-sideBar{
+    border: 1px solid green;
+
         border: 1px solid black;
         width: 500px;
         height: 400px;

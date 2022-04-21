@@ -7,6 +7,11 @@
     background-color: $light-mode-text-border;
     text-align: start;
     border: 1px solid black;
+
+    @media screen and (max-width: 450px){   
+        width: 80%;
+        margin: 15px 10%;
+    }
     
     .project-img{
         width: 100%;
@@ -44,11 +49,5 @@
         text-align: center;
         width: 80%;
         margin: 20px 10%;
-    }
-}
-@media screen and (max-width: 450px){
-    .project{
-        width: 80%;
-        margin: 15px 10%;
     }
 }

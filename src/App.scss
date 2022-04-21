@@ -13,6 +13,9 @@ body {
   box-sizing: border-box;
   
   @include background-light;
+  @media screen and (max-width: 450px){
+    width: 100%;
+  }
 }
 
 body.dark-mode{
@@ -21,269 +24,9 @@ body.dark-mode{
   @include background-dark;
   transition: 1.5s;
   
-  .themeChanger{
-    background-color: $dark-mode-navbar-bg;
-    
-    &__icon{
-      color: $dark-mode-text-border;
-    }
-  }
-  
-  .aboutHome{
-    border: 4px solid $dark-mode-text-border;
-    background-color: $dark-mode-navbar-bg;
-
-    &__image--wrapper{
-      background-color: $dark-mode-text-border;
-    }
-
-    &__text{
-        h1{
-          color: $dark-mode-text-border;
-        }
-    
-    }
-    &__button{
-      a{
-          box-shadow: 
-          3px 3px 3px $dark-mode-text;
-          background-color: $dark-mode-text-border;
-          color: $light-mode-text;  
-      }
-
-      &--second{
-          color: $dark-mode-text-border;     
-          border: 1px solid $dark-mode-text-border;
-          a{
-              background-color: $dark-mode-text-button;
-              color: $dark-mode-text-border;
-          }
-      }
-    }
-  }
-  .interest {
-    $this: &;
-    &__image-wrapper {
-      #{$this}--extended & {
-          border: 1px dashed $dark-mode-text-border;
-      }
-    }
-
-    &__icon {
-        color: $dark-mode-text-border;
-    }
-
-    &__text {
-        &--title {  
-            color: $dark-mode-text;
-        }
-
-        &--description {
-            color: $dark-mode-text-border;
-        }
-    }
-}
-  .navbar-sideBar{
-    background-color: $dark-mode-navbar-bg;
-    color: $dark-mode-text;
-    h1{
-       &::first-letter{
-           color: $dark-mode-text-border;
-       }
-   }
-   
-
-   .navbar-links{
-    color: $dark-mode-text;
-      a{
-          color: $dark-mode-text;
-      }
-    }
-      .navbar-social{
-          .icon{
-              color: $dark-mode-text;
-              font-size: 1.4rem;
-          }
-      }
-  }
-
   .menu-icon{
     color: $dark-mode-text-border;
     background-color: black;
-  }
-
-  
-  .home-container{
-    @include background-dark;
-    .home{
-      border: 6px solid $dark-mode-text-border;
-    } 
-  }
-  
-  .home-mobile{
-    @include background-dark;
-    .home-title-mobile{
-      border: 6px solid $dark-mode-text-border; 
-      .home-mobile-btn{
-        button{
-          background-color: $dark-mode-text-border;
-          a{
-            color: black;   
-          }                
-        }
-      }
-    }
-  }
-  
-  .navbarHome-sideBar{
-    background-color: $dark-mode-navbar-bg;
-    
-    h1{
-      &::first-letter{
-        color: $dark-mode-text-border;
-      }
-    }
-    .navbarHome-links{
-      a{
-        color: $dark-mode-text
-      }
-    }
-    .navbarHome-footer{
-      .icon{
-        color: $dark-mode-text;
-      }
-    }
-  }
-  .about{
-    @include background-dark;
-
-    &__image-wrapper{
-      background-color: $dark-mode-text-border;            
-    }
-
-    &__text--header{
-      color: $dark-mode-text-border;
-    }
-
-    &__button{
-      a{
-        box-shadow: 3px 3px 3px $dark-mode-text;
-        background-color: $dark-mode-text-border;
-        color: $light-mode-text;  
-      }
-
-      &--second{
-        color: $dark-mode-text-border;     
-        border: 1px solid $dark-mode-text-border;
-        a{
-          background-color: $dark-mode-text-button;
-          color: $dark-mode-text-border;
-      }
-      }
-    }
-    
-    .about-profile{
-      .about-img{
-        background-color: $dark-mode-text-border;
-      }
-      .about-text{
-        h1{
-          color: $dark-mode-text-border;
-            }
-            .about-button{
-            background-color: $dark-mode-text-border;
-
-          a{  
-            color: $dark-mode-text;
-          }
-        }
-        .about-buttontwo{
-          @extend .about-button;
-          background-color: $dark-mode-text-button;
-          color: $dark-mode-text-border;     
-          border: 1px solid $dark-mode-text-border;
-          a{
-              text-decoration: none;
-              color: $dark-mode-text-border;     
-          }
-      }
-    }
-    .myJourneys{
-      .myJourney-icon{ 
-            color: $dark-mode-text-border;
-            border: 1px dashed $dark-mode-text-border;   
-          }
-          .myJourney-text{
-              :last-child{
-                  color: $dark-mode-text-border;
-              }
-    }
-  }
-
-    .interest{
-      .interestIcon-icon{
-        color: $dark-mode-text-border;
-      }
-      .interestIcon-title{
-        color: $dark-mode-text;
-      }
-    }
-  }
-}
-  .resume{
-    @include background-dark;
-
-    .skill__bar{
-      background-color: $dark-mode-text-border;
-      }
-
-      .education__icon{
-        color: $dark-mode-text-border;
-      }
-
-      .education__date{
-          color: $dark-mode-text-border;
-      }
-      .headerResume__icon{
-        color: $dark-mode-text-border;
-      }
-  }
-
-.contact{ 
-    @include background-dark;
-        
-    .contactDetails{
-      background-color: $dark-mode-navbar-bg;
-      
-      &__icon{
-          color: $dark-mode-text-border;
-      }
-    }
-    .contactInput__button{     
-      input[type=submit]{
-          background-color: $dark-mode-text-border;
-          color: $dark-mode-text-button;
-      }
-    }
-  }
-.portfolio-contrainer{
-  @include background-dark;
-  color: $dark-mode-text;
-
-  .project{
-    background-color: $dark-mode-text-border;
-  }
-}
-.services{
-  @include background-dark;
-
-  .service{
-      border: 1px dashed $dark-mode-text-border;
-
-      &__icon{  
-        color: $dark-mode-text-border;
-      }
-    }
   }
 }
 
@@ -298,29 +41,25 @@ code {
   display: flex;
   flex-direction: row;
   position: relative;
+  
+  @media screen and (max-width: 450px){
+      width: 90%;
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      height: min-content;
+  }
 
   
   .toggle{
     position: absolute;
     right: 5%;
     top: 1%;
-  }
-}
-@media screen and (max-width: 450px){
-  body{
-    width: 100%;
-  }
-  .App{
-    width: 100%;
-    height: min-content;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
 
-    .toggle{
-      position: relative;
-      margin: 0;
-      padding: 10px 0px 0px 60px;
+    @media screen and (max-width: 450px){
+          position: relative;
+          margin: 0;
+          padding: 10px 0px 0px 60px;
     }
   }
 }

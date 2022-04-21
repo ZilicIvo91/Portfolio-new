@@ -4,7 +4,7 @@
     width: 100%;
     margin-left: 300px;
     @include background-light;
-    height: 100vh;
+    height: min-content;
 
         @media screen and (max-width: 450px){
             margin: 0px auto;
@@ -38,3 +38,20 @@
         }
     }
 }
+.dark-mode .contact{ 
+    @include background-dark;
+        
+    .contactDetails{
+      background-color: $dark-mode-navbar-bg;
+      
+      &__icon{
+          color: $dark-mode-text-border;
+      }
+    }
+    .contactInput__button{     
+      input[type=submit]{
+          background-color: $dark-mode-text-border;
+          color: $dark-mode-text-button;
+      }
+    }
+  }

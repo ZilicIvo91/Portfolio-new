@@ -54,6 +54,13 @@
     }
 }
 
+.dark-mode .home-container{
+    @include background-dark;
+    .home{
+      border: 6px solid $dark-mode-text-border;
+    } 
+  }
+
 @media screen and (max-width: 450px){
     .home-about, .home-container{
         display: none;
@@ -100,4 +107,18 @@
         }
 
     }
+    .dark-mode .home-mobile{
+        @include background-dark;
+        .home-title-mobile{
+          border: 6px solid $dark-mode-text-border; 
+          .home-mobile-btn{
+            button{
+              background-color: $dark-mode-text-border;
+              a{
+                color: black;   
+              }                
+            }
+          }
+        }
+      }
 }

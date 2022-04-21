@@ -1,7 +1,7 @@
 import React from 'react';
-import './InterestBEM.scss';
+import './Interest.scss';
 
-export default function InterestBEM({ Icon, title, desc}) {
+export default function Interest({ Icon, title, desc}) {
     return (
         <div className={`interest ${desc && 'interest--extended'}`}>
             <div className="interest__inner">

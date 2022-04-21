@@ -29,3 +29,14 @@
         }  
     }
 }
+.dark-mode .services{
+    @include background-dark;
+  
+    .service{
+        border: 1px dashed $dark-mode-text-border;
+  
+        &__icon{  
+          color: $dark-mode-text-border;
+        }
+      }
+    }

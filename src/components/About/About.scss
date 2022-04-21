@@ -132,10 +132,13 @@
     }
 
     .journey__icons{
-        display: flex;
-        justify-content: space-around;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         margin-top: 50px;
+        margin-left: 50px;
         font-size: 1.2rem;
+        height: 80%;
 
         @media screen and (max-width: 450px){
             display: flex;
@@ -172,4 +175,80 @@
             margin: 50px 0px;
         }
     }
+}
+.dark-mode .about{
+    @include background-dark;
+
+    &__image-wrapper{
+      background-color: $dark-mode-text-border;            
+    }
+
+    &__text--header{
+      color: $dark-mode-text-border;
+    }
+
+    &__button{
+      a{
+        box-shadow: 3px 3px 3px $dark-mode-text;
+        background-color: $dark-mode-text-border;
+        color: $light-mode-text;  
+      }
+
+      &--second{
+        color: $dark-mode-text-border;     
+        border: 1px solid $dark-mode-text-border;
+        a{
+          background-color: $dark-mode-text-button;
+          color: $dark-mode-text-border;
+      }
+      }
+    }
+    
+    .about-profile{
+      .about-img{
+        background-color: $dark-mode-text-border;
+      }
+      .about-text{
+        h1{
+          color: $dark-mode-text-border;
+            }
+            .about-button{
+            background-color: $dark-mode-text-border;
+
+          a{  
+            color: $dark-mode-text;
+          }
+        }
+        .about-buttontwo{
+          @extend .about-button;
+          background-color: $dark-mode-text-button;
+          color: $dark-mode-text-border;     
+          border: 1px solid $dark-mode-text-border;
+          a{
+              text-decoration: none;
+              color: $dark-mode-text-border;     
+          }
+      }
+    }
+    .myJourneys{
+      .myJourney-icon{ 
+            color: $dark-mode-text-border;
+            border: 1px dashed $dark-mode-text-border;   
+          }
+          .myJourney-text{
+              :last-child{
+                  color: $dark-mode-text-border;
+              }
+    }
+  }
+
+    .interest{
+      .interestIcon-icon{
+        color: $dark-mode-text-border;
+      }
+      .interestIcon-title{
+        color: $dark-mode-text;
+      }
+    }
+  }
 }

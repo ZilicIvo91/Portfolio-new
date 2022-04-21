@@ -32,6 +32,25 @@
     }
 }
 
+.dark-mode .resume{
+    @include background-dark;
+
+    .skill__bar{
+      background-color: $dark-mode-text-border;
+      }
+
+      .education__icon{
+        color: $dark-mode-text-border;
+      }
+
+      .education__date{
+          color: $dark-mode-text-border;
+      }
+      .headerResume__icon{
+        color: $dark-mode-text-border;
+      }
+  }
+
 @media screen and (max-width: 450px){
     .resume__title{
         width: 100%;

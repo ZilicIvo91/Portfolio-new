@@ -1,7 +1,6 @@
 @import '../../../sass/theme.scss';
 
 .interest {
-    $this: &;
     width: 100%;
     margin: 5px;
 
@@ -26,11 +25,6 @@
 
     &__image-wrapper {
         padding: 2px;
-
-        #{$this}--extended & {
-            border: 1px dashed $light-mode-text-border;
-            border-radius: 10px;
-        }
     }
 
     &__icon {
@@ -51,6 +45,22 @@
         &--description {
             margin-top: 5px;
             color: $light-mode-text-border;
+        }
+    }
+}
+
+.dark-mode .interest {
+    &__icon {
+        color: $dark-mode-text-border;
+    }
+
+    &__text {
+        &--title {  
+            color: $dark-mode-text;
+        }
+
+        &--description {
+            color: $dark-mode-text-border;
         }
     }
 }

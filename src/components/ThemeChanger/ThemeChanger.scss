@@ -23,3 +23,10 @@
         }
     }
 }
+.dark-mode .themeChanger{
+    background-color: $dark-mode-navbar-bg;
+    
+    &__icon{
+      color: $dark-mode-text-border;
+    }
+  }

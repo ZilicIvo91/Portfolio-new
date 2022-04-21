@@ -3,7 +3,7 @@ import { GiCookingPot } from 'react-icons/gi';
 import { BiCameraMovie, BiFootball } from 'react-icons/bi';
 import { GiBookshelf } from 'react-icons/gi';
 
-export const Interest = [
+export const interest = [
     {
        id: 1,
        icon: GiMusicalScore,

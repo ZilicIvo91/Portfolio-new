@@ -4,8 +4,8 @@ import picture from '../../images/picture.jpg'
 import CV_Zilic_Ivo from '../../CV/CV_Zilic_Ivo.pdf';
 import Navbar from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
-import InterestBEM from './Interest/InterestBEM';
-import { Interest } from '../../service/Interest';
+import Interest from './Interest/Interest';
+import { interest } from '../../service/interest';
 import { Journey } from '../../service/Journey';
 
 
@@ -54,7 +54,7 @@ function About() {
                             {Journey.map((journey) => {
                                     return(
                                         <div key={journey.id}>
-                                            <InterestBEM Icon={journey.icon} title={journey.title} desc={journey.desc} />
+                                            <Interest Icon={journey.icon} title={journey.title} desc={journey.desc} />
                                         </div>
                                     )
                                 })}
@@ -65,10 +65,10 @@ function About() {
                         <div className="interest__holder">
                             <h2 className="interest__header">My Interests</h2>
                             <div className="interest__icons">
-                                {Interest.map((interest) => {
+                                {interest.map((interest) => {
                                     return(
                                         <div key={interest.id}>
-                                            <InterestBEM Icon={interest.icon} title={interest.title} />
+                                            <Interest Icon={interest.icon} title={interest.title} />
                                         </div>
                                     )
                                 })}
